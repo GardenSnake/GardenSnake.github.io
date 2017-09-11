@@ -7,3 +7,21 @@ body, html {
 	background: #ddd;
 	padding: 1.5em 0 1.5em 1em;
 }
+
+.signature-box {
+	height: 250px;
+	width: 300px;
+	border: 1px solid #a00;
+	border-radius: 7px;
+	margin: 4px;
+	padding: 2px;
+	float: left;
+	overflow: hidden;
+
+}
+#deep-red {
+	background-color: #278734;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bolder;
+}
