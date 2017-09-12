@@ -40,6 +40,14 @@ body, html {
 	font-weight: bolder;
 }
 
+#reignnfire {
+	background-color: #e3f29b;
+}
+
+#karlsol {
+	background-color: grey;	
+}
+
 .projects button {
     background-color: #310999; /* background color*/
     border: 3px solid black; /* border color*/
