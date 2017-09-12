@@ -36,3 +36,25 @@ body, html {
 	font-size: 15px;
 	font-weight: bolder;
 }
+
+.projects button {
+    background-color: #310999; /* background color*/
+    border: 3px solid black; /* border color*/
+    color: white; /* White text */
+    padding: 20px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+	height: 100px;
+	font-size: 20px;
+	font-weight:bold;
+    display: block; /* Make the buttons appear below each other */
+}
+
+.projects button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.projects button:hover {
+    background-color: #3e8e41;
+}
