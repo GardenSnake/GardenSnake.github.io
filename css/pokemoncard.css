@@ -1,0 +1,10 @@
+h1{ font-size: 64px; font-family: courier; text-align: center;   
+		background: url('http://www.freewebheaders.com/wordpress/wp-content/gallery/other-backgrounds/pink-lonely-chair-website-header-design.jpg'); margin-left: auto; margin-right: auto; width: 14em
+	}
+		
+table { margin-top: 30px;} 
+td {padding-top: 20px; padding-right:40px;padding-left:40px;padding-bottom: 20px;} 
+img {border: 8px solid black; width:240px; height: 414px;}
+img:active{width:242px; height: 417px;}
+#info{font-size: 20px; font-weight: bold; padding-top:40px;}
+button{width: 100px; height: 60px;}
