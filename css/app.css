@@ -1,39 +1,40 @@
 body, html {
-	width: 100vw;
 	height: 100vh;
+	width: 100vw;
 }
-#intro {
-	font-family: sans-serif;
+
+.box {
+	border-color: grey;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#deep-red {
+	background-color: #278734;
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: center;
+}
+.intro {
 	background: #ddd;
+	font-family: sans-serif;
 	padding: 1.5em 0 1.5em 1em;
 }
 
-.signature-box {
-	height: 250px;
-	width: 300px;
-	border: 1px solid #a00;
-	border-radius: 7px;
-	margin: 4px;
-	padding: 2px;
-	float: left;
-	overflow: hidden;
-	text-align: center;
-	font-weight: bolder;
+#kuponinja {
+	background: #000; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #000 , #fff); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #000 , #fff); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #000 , #fff); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #000 , #fff); /* Standard syntax */
+	color: #fff;
 	font-size: 15px;
-}
-#deep-red {
-	background-color: #278734;
+	font-weight: bolder;
+	text-align: center;
 }
 
-.box{
-	border: solid 1px grey;
-}
+
 #obiwan1715 {
-
-}
-
-#visampaio {
-	background-color: lightpink;
 	text-align: center;
 	font-size: 15px;
 	font-weight: bolder;
@@ -67,4 +68,15 @@ body, html {
 /* Add a background color on hover */
 .projects button:hover {
     background-color: #3e8e41;
+}
+
+.signature-box {
+	height: 250px;
+	width: 300px;
+	border: 1px solid #a00;
+	border-radius: 7px;
+	margin: 4px;
+	padding: 2px;
+	float: left;
+	overflow: hidden;
 }
