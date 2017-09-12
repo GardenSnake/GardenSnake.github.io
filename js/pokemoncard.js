@@ -9,7 +9,7 @@ if(packNumber==1){
 var img = new Image();
 var div = document.getElementById('div1');
 div.appendChild(img);
-img.src = pack+".jpg";
+img.src = "images/"+pack+".jpg";
 img.id="cardPicture";
 img.onclick = function(){draw();};
 }
