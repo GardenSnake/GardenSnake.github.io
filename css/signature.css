@@ -1,0 +1,47 @@
+#deep-red {
+	background-color: #278734;
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+#kuponinja {
+	background: #000; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #000 , #fff); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #000 , #fff); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #000 , #fff); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #000 , #fff); /* Standard syntax */
+	color: #fff;
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+
+#obiwan1715 {
+	text-align: center;
+	font-size: 15px;
+	font-weight: bolder;
+}
+
+#reignnfire {
+	background-color: #e3f29b;
+}
+
+#karlsol {
+	background-color: grey;	
+}
+
+#Morgan_R {
+    background-image: url("../images/owl01.jpg");
+    background-size: 100%;
+	background-color: #523019;
+    color: #f9f1ed;
+    position: relative;
+}
+
+#Morgan_R .username {
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 1em;
