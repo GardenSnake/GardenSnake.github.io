@@ -10,3 +10,8 @@
 		height: 100%;
 		background-color: #81ebf9;
 	}
+
+	.worldinput input {
+
+		width: 100%;
+	}
