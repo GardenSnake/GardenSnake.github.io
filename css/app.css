@@ -87,6 +87,14 @@ h2 {
 	margin-left: 30px;
 }
 
+.projects a {
+	color: white;
+}
+
+.projects a:hover {
+	color: white;
+	text-decoration: none;
+}
 .projects button:not(:last-child) {
     border-bottom: none; /* Prevent double borders */
 }
