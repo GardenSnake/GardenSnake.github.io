@@ -17,6 +17,7 @@ body, html {
 	background: #ddd;
 	font-family: sans-serif;
 	padding: 1.5em 0 1.5em 1em;
+	margin-top: 200px;
 }
 
 .IntroSection {
@@ -77,6 +78,7 @@ h2 {
 	top: 0;
 	background-color: grey;
 	width: 100%;
+	margin-bottom: 20px;
 
 
 }
@@ -118,3 +120,5 @@ h2 {
 	margin-top:  50px;
 
 }
+
+
