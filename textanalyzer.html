@@ -2,17 +2,22 @@
 <html>
 <head>
 	<title>Text Analyzer </title>
-  
+ 
 	<script>
+	<!-- Add any function in javascript and connect it to a button in html. -->
 	
-	function characterCount() {
+	function characterCount() {//counts total amount of characters
 		document.getElementById("output").innerHTML = document.getElementById("textarea").value.length ;
 	}
 	
-	function spaceCount(){
+	function spaceCount(){//counts total amount of white space
 		var str = document.getElementById("textarea").value;
 		var spaceCount = (str.split(" ").length);
 		document.getElementById("output").innerHTML = (spaceCount-1);
+	}
+	
+	function upperCase(){//capitalizes every letter
+		document.getElementById("output").innerHTML = document.getElementById("textarea").value.toUpperCase();
 	}
 	
 	</script>
@@ -20,18 +25,20 @@
 </head>
 
 <body>
-	<p id="output">insert text below and analyze<p>
-	<textarea id="textarea" rows="4" cols="50"></textarea>
+	<p id="output">Insert text in textbox below and analyze it.<p>
+	<textarea id="textarea" rows="4" cols="60"></textarea>
 	
     <div class="buttons">
-       <button class="button" onclick="characterCount()">Character Count</a>
-       <button class="button" onclick="spaceCount()">Space Count</a>
-	   <button class="button">?</a>
-       <button class="button">?</a>
-       <button class="button">?</a>
-       <button class="button">?</a>
+        <button class="button" onclick="characterCount()">Character Count</a>
+	<button class="button" onclick="spaceCount()">Space Count</a>
+	<button class="button" onclick="upperCase()">Uppercase</a>
+	<button class="button">?</a>
+	<button class="button">?</a>
+	<button class="button">?</a>
+	<button class="button">?</a>
     </div>
 
 </body>
 
 </html>
+
