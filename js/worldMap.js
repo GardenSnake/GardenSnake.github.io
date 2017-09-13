@@ -23,6 +23,7 @@ function initMap() {
    {user: "GardenSnake",
     address: "New York, USA"}
 
+
   ];
 
 for (var i=0; i < contributors.length; i++)
