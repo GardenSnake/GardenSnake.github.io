@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Analyzer </title>
+  
+	<script>
+	
+	function characterCount() {
+		document.getElementById("output").innerHTML = document.getElementById("textarea").value.length ;
+	}
+	
+	function spaceCount(){
+		var str = document.getElementById("textarea").value;
+		var spaceCount = (str.split(" ").length);
+		document.getElementById("output").innerHTML = (spaceCount-1);
+	}
+	
+	</script>
+  
+</head>
+
+<body>
+	<p id="output">insert text below and analyze<p>
+	<textarea id="textarea" rows="4" cols="50"></textarea>
+	
+    <div class="buttons">
+       <button class="button" onclick="characterCount()">Character Count</a>
+       <button class="button" onclick="spaceCount()">Space Count</a>
+	   <button class="button">?</a>
+       <button class="button">?</a>
+       <button class="button">?</a>
+       <button class="button">?</a>
+    </div>
+
+</body>
+
+</html>
