@@ -1,18 +1,8 @@
 # GardenSnake.github.io
 A collaborative web project.
 
-What should we do?
-(Please add ideas for what we could do with this website)
-
-Some Ideas:
-
-1.Chat Website
-
-2.Social Media Type Website
-
-
-## How to Contribute!
-_People might be coming to this being new to GitHub and everything - so it is good to have a step by step definition as to how to help in here!_
+## How to Get Started!
+It's always hard the first time you do something. Reading articles & watching tutorials can help, but what's better than actually trying to do the stuff? This project helps newcomers get right into programming along with others and make something amazing happen. If you're new to GitHub, follow the steps below. 
 
 ### Getting the files in your repo and computer
 
@@ -34,7 +24,7 @@ _People might be coming to this being new to GitHub and everything - so it is go
 ## Getting latest changes from the repository
  _Git is all about collaboration and synchronization_
 Now, you might have a copy of the repository, but so do other people that want to contribute. If everybody were to contribute at the same time, a lot of conflicts would appear - imagine that you and somebody else edited line 25 of the index file - which change should be kept? Yours? Theirs? Both?
- Imagine yoy did fork, but went away on vacations for a month. Changes were made to the repo - and you need to have the latests things to work on so your new additions will not conflict with anybody else's!
+ Imagine you did fork, but went away on vacations for a month. Changes were made to the repo - and you need to have the latests things to work on so your new additions will not conflict with anybody else's!
 
   * To have the latest changes available - you need to add the original repo as an *Upstream* to your repo. 
   	* These are the [console steps required to do so](https://help.github.com/articles/configuring-a-remote-for-a-fork/) 
@@ -62,7 +52,10 @@ Now, you might have a copy of the repository, but so do other people that want t
 * With all this, you are all set to have your changes merged in the repository - and wait for it to be merged back to the master branch!
 
 
-_TODO: Add a few recommended lectures about git workflows?_
+## Learning Resources
+
+* [Git Tutorial for Beginners: Command-Line Fundamentals](https://www.youtube.com/watch?v=HVsySz-h9r4)
+* [Git CodeAcademy Course](https://www.codecademy.com/learn/learn-git)
 
 _TODO: Explain how to make the `master` branch appear in `https://{username}.github.io/`_
 
