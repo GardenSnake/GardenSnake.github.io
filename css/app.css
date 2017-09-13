@@ -55,6 +55,21 @@ body, html {
 	background-color: grey;	
 }
 
+#Morgan_R {
+    background-image: url("../images/owl01.jpg");
+    background-size: 100%;
+	background-color: #523019;
+    color: #f9f1ed;
+    position: relative;
+}
+
+#Morgan_R .username {
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+}
+
 .projects button {
     background-color: #310999; /* background color*/
     border: 3px solid black; /* border color*/
