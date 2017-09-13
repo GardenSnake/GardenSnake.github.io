@@ -18,7 +18,10 @@ function initMap() {
     address: "Toronto, ON"},
 
     {user: "prikkprikkprikk",
-    address: "Oslo, Norway"}
+    address: "Oslo, Norway"},
+	  
+   {user: "GardenSnake",
+    address: "New York, USA"}
 
   ];
 
