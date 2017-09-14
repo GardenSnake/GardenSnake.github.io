@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Text Analyzer </title>
-  
-	<script>
+    <title>Text Analyzer </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css">
 	
-	function characterCount() {
-		document.getElementById("output").innerHTML = document.getElementById("textarea").value.length ;
-	}
-	
-	function spaceCount(){
-		var str = document.getElementById("textarea").value;
-		var spaceCount = (str.split(" ").length);
-		document.getElementById("output").innerHTML = (spaceCount-1);
-	}
-	
-	</script>
-  
+    <script>
+        <!-- Add any function in javascript here and connect it to a button in html below. -->
+
+        function characterCount() { //counts total amount of characters
+            document.getElementById("output").innerHTML = document.getElementById("textarea").value.length;
+        }
+
+        function spaceCount() { //counts total amount of white space
+            var str = document.getElementById("textarea").value;
+            var spaceCount = (str.split(" ").length);
+            document.getElementById("output").innerHTML = (spaceCount - 1);
+        }
+
+        function upperCase() { //capitalizes every letter
+            document.getElementById("output").innerHTML = document.getElementById("textarea").value.toUpperCase();
+        }
+
+    </script>
+    
 </head>
 
 <body>
-	<p id="output">insert text below and analyze<p>
-	<textarea id="textarea" rows="4" cols="50"></textarea>
-	
-    <div class="buttons">
-       <button class="button" onclick="characterCount()">Character Count</a>
-       <button class="button" onclick="spaceCount()">Space Count</a>
-	   <button class="button">?</a>
-       <button class="button">?</a>
-       <button class="button">?</a>
-       <button class="button">?</a>
-    </div>
 
+    <div id="navMenu"></div> <!-- this div is filled by the nav.js script, maybe there's a better way to reuse navbar code -->
+
+    <p id="output">Insert text in textbox below and analyze it.
+        <p>
+            <textarea id="textarea" rows="4" cols="60"></textarea>
+
+            <div class="buttons">
+                <button class="button" onclick="characterCount()">Character Count</a>
+	<button class="button" onclick="spaceCount()">Space Count</a>
+	<button class="button" onclick="upperCase()">Uppercase</a>
+	<button class="button">?</a>
+	<button class="button">?</a>
+	<button class="button">?</a>
+	<button class="button">?</a>
+    </div>
+<script type="text/javascript" src="js/nav.js"></script>
 </body>
 
 </html>

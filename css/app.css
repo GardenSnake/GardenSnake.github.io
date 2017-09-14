@@ -1,124 +1,78 @@
-body, html {
-	height: 100vh;
-	width: 100vw;
+body,
+html {
+    height: 100vh;
+    width: 100vw;
 }
 
 .box {
-	border-color: grey;
-	border-style: solid;
-	border-width: 1px;
-	margin: auto;
-	width: 95%;
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    margin: auto;
+    width: 95%;
 }
 
 
 }
 .intro {
-	background: #ddd;
-	font-family: sans-serif;
-	padding: 1.5em 0 1.5em 1em;
-	margin-top: 200px;
+    background: #ddd;
+    font-family: sans-serif;
+    padding: 1.5em 0 1.5em 1em;
+    margin-top: 200px;
 }
-
 .IntroSection {
-	width: 95%;
-	margin: auto;
+    width: 95%;
+    margin: auto;
 }
 
-
+.projects .button, .projects .button:visited {
+    background: #310999;
+    border: 3px solid black;
+    color: white;
+    padding: 0.2em 0.2em;
+	cursor: pointer;
+    font-size: 1.2em;
+    font-weight:bold;
+    display: block;
+	max-width: 50%;
+    margin: auto;
+	text-align: center;
 }
 
-.projects button {
-    background-color: #310999; /* background color*/
-    border: 3px solid black; /* border color*/
-    color: white; /* White text */
-    padding: 20px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 50%; /* Set a width if needed */
-	height: 100px;
-	font-size: 20px;
-	font-weight:bold;
-    display: block; /* Make the buttons appear below each other */
-    margin: auto; /* centre the whole box */
-}
-h2 {
-	margin-left: 30px;
+.projects .button:not(:last-child) {
+	margin-bottom: 0.3em;
 }
 
-.projects a {
-	color: white;
-}
-
-.projects a:hover {
+.projects .button:hover, .projects .button:focus {
+	background: #3e8e41;
 	color: white;
 	text-decoration: none;
 }
-.projects button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
-}
 
-/* Add a background color on hover */
-.projects button:hover {
-    background-color: #3e8e41;
+h2 {
+    margin-left: 30px;
 }
 
 .signature-box {
-	height: 250px;
-	width: 300px;
-	border: 1px solid #a00;
-	border-radius: 7px;
-	margin: 4px;
-	padding: 2px;
-	float: left;
-	overflow: hidden;
-}
-
-.navBar {
-	position: fixed;
-	top: 0;
-	background-color: grey;
-	width: 100%;
-	margin-bottom: 20px;
-
-
-}
-
-.navBar li a {
-	
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-
-
-}
-
-.navBar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    height: 250px;
+    width: 300px;
+    border: 1px solid #a00;
+    border-radius: 7px;
+    margin: 4px;
+    padding: 2px;
+    float: left;
     overflow: hidden;
 }
 
-.navBar li {
-	display: inline;
-	float: left;
+.navDiv {
+    background-color: #eebaba;
+    border-radius: 2px;
 }
 
-.navBar li a:hover {
-
-	background-color: black;
-
-}
-
-.active {
-	background-color: lightblue;
-
-}
 .top {
-	margin-top:  50px;
-
+    margin-top: 50px;
 }
 
-
+#navMenu {
+	margin-bottom: 3em;
+}
