@@ -1,16 +1,17 @@
-# [GardenSnake.github.io](https://gardensnake.github.io/)
-A collaborative web project
+# [GardenSnake.github.io](https://gardensnake.github.io/)  
+A collaborative web project.
 
-## How to Get Started!
 It's always hard the first time you do something. Reading articles & watching tutorials can help, but what's better than actually trying to do the stuff? This project helps newcomers get right into programming along with others and make something amazing happen. If you're new to GitHub, follow the steps below. 
 
-### Getting the files in your repo and computer
+## How to Get Started!
 
-* Login to your own GitHub account ([or create one if you don't have yet!](https://github.com/))
-* Have Git installed on your machine (If you are going with the console git version, be sure to go through a tutorial. They are short and really good. [Here is one, for example](https://try.github.io/))
-* Return to this very page
-* Click 'Fork' at the top right
-	* Select where you want to fork it. Fork is, basically 'to have your own copy of the code in the project'
+### Before you begin
+_Login to your own GitHub account ([or create one if you don't have yet!](https://github.com/)) 
+If you're using Windows, have Git installed on your machine (If you are going with the console git version, be sure to go through a tutorial. They are short and really good. [Here is one, for example](https://try.github.io/))_
+
+### Getting the files in your repo and computer
+*  Click 'Fork' at the top right of this page
+	* This will create a copy of this repository in your account. You basically have your own copy now.
 	* (You only need to fork once, how to update project with latest changes is expained below)
 * Go to your fork
 	* Git redirects you automatically
