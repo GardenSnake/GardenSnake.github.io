@@ -45,3 +45,11 @@
     position: absolute;
     bottom: 0;
     left: 1em;
+}
+
+#tmoney {
+    text-align: center;
+    font-weight: bolder;
+    background-color: cornflowerblue;
+    color: white;
+}
