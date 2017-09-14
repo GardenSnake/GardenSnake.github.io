@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Text Analyzer </title>
- 
-	<script>
-	<!-- Add any function in javascript and connect it to a button in html. -->
-	
-	function characterCount() {//counts total amount of characters
-		document.getElementById("output").innerHTML = document.getElementById("textarea").value.length ;
-	}
-	
-	function spaceCount(){//counts total amount of white space
-		var str = document.getElementById("textarea").value;
-		var spaceCount = (str.split(" ").length);
-		document.getElementById("output").innerHTML = (spaceCount-1);
-	}
-	
-	function upperCase(){//capitalizes every letter
-		document.getElementById("output").innerHTML = document.getElementById("textarea").value.toUpperCase();
-	}
-	
-	</script>
-  
+    <title>Text Analyzer </title>
+
+    <script>
+        <!-- Add any function in javascript and connect it to a button in html. -->
+
+        function characterCount() { //counts total amount of characters
+            document.getElementById("output").innerHTML = document.getElementById("textarea").value.length;
+        }
+
+        function spaceCount() { //counts total amount of white space
+            var str = document.getElementById("textarea").value;
+            var spaceCount = (str.split(" ").length);
+            document.getElementById("output").innerHTML = (spaceCount - 1);
+        }
+
+        function upperCase() { //capitalizes every letter
+            document.getElementById("output").innerHTML = document.getElementById("textarea").value.toUpperCase();
+        }
+
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css">
 </head>
 
 <body>
-	<p id="output">Insert text in textbox below and analyze it.<p>
-	<textarea id="textarea" rows="4" cols="60"></textarea>
-	
-    <div class="buttons">
-        <button class="button" onclick="characterCount()">Character Count</a>
+
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark" style="margin-bottom: 20px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><b>GardenSnake Project</b></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="textanalyzer.html"><i class="fa d-inline fa-lg fa-file-text"></i>&nbsp; Text Analyzer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="worldMap.html"><i class="fa d-inline fa-lg fa-globe"></i>&nbsp; World Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contributors.html"><i class="fa d-inline fa-lg fa-handshake-o"></i>&nbsp; Contributors</a>
+                    </li>
+                </ul>
+                <a class="btn navbar-btn btn-primary ml-2 text-white" href="https://github.com/GardenSnake/GardenSnake.github.io"><i class="fa d-inline fa-lg fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <p id="output">Insert text in textbox below and analyze it.
+        <p>
+            <textarea id="textarea" rows="4" cols="60"></textarea>
+
+            <div class="buttons">
+                <button class="button" onclick="characterCount()">Character Count</a>
 	<button class="button" onclick="spaceCount()">Space Count</a>
 	<button class="button" onclick="upperCase()">Uppercase</a>
 	<button class="button">?</a>
@@ -41,4 +67,3 @@
 </body>
 
 </html>
-
