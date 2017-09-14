@@ -1,5 +1,5 @@
-# GardenSnake.github.io
-A collaborative web project.
+# [GardenSnake.github.io](https://gardensnake.github.io/)
+A collaborative web project
 
 ## How to Get Started!
 It's always hard the first time you do something. Reading articles & watching tutorials can help, but what's better than actually trying to do the stuff? This project helps newcomers get right into programming along with others and make something amazing happen. If you're new to GitHub, follow the steps below. 
