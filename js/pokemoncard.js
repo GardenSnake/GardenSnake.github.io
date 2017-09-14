@@ -25,7 +25,7 @@ function selectPack(packNumber,pack){
 	}
 }
 	
-function draw(packNumber){
+function draw(packNumber){//pokemon pack selected
 if(packNumber==1){
 	cardNumber = Math.floor(Math.random() * 102);
 	cardName = pokemonCards[cardNumber][0].replace(/\s+/g, '-');
@@ -33,7 +33,7 @@ if(packNumber==1){
 	document.getElementById("info").innerHTML="#"+(cardNumber+1)+"/102 "+cardName;
 	document.getElementById('cardPicture').src= url;
 	}
-if(packNumber==3){
+if(packNumber==3){//yugioh pack selected
 	cardNumber = Math.floor(Math.random() * 126);
 	if(cardNumber<10)
 		url = "https://ycgscripts-chakrasitesinc.netdna-ssl.com/images/lob/LOB-EN00"+cardNumber+".jpg";
