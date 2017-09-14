@@ -11,6 +11,7 @@ It's always hard the first time you do something. Reading articles & watching tu
 * Return to this very page
 * Click 'Fork' at the top right
 	* Select where you want to fork it. Fork is, basically 'to have your own copy of the code in the project'
+	* (You only need to fork once, how to update project with latest changes is expained below)
 * Go to your fork
 	* Git redirects you automatically
 	* Else, you can go to GitHub, go to your Profile, and it will be listed there as a project
