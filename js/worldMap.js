@@ -40,7 +40,11 @@ function initMap() {
         {
             user: "karimhurani",
             address: "Ottawa, ON"
-        }
+        },
+		{
+			user: "IKnowBashFu",
+			address: "Bay Ridge, Brooklyn, NY, USA"
+		}
 
 
   ];
