@@ -1,5 +1,5 @@
  document.getElementById("navMenu").innerHTML =
- 		'<nav class="navbar navbar-expand-md bg-primary navbar-dark" style="margin-bottom: 20px;">'+
+ 		'<nav class="navbar navbar-expand-md bg-primary navbar-dark">'+
         '<div class="container">' +
         '<a class="navbar-brand" href="index.html"><b>GardenSnake Project</b></a>' +
         '<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>' +
