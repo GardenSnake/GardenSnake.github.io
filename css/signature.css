@@ -53,3 +53,15 @@
     background-color: cornflowerblue;
     color: white;
 }
+
+#Snoopy {
+    background-image: url("../images/Snoopy.png");
+    position:relative;
+}
+
+#Snoopy .username {
+    color:white;
+    font-family:ArcadeClassic;
+    bottom: 0;
+    font-size:25px;
+}
