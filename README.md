@@ -28,7 +28,7 @@ Now, you might have a copy of the repository, but so do other people that want t
 
   * To have the latest changes available - you need to add the original repo as an *Upstream* to your repo. 
   	* These are the [console steps required to do so](https://help.github.com/articles/configuring-a-remote-for-a-fork/) 
-  	* In short, you need to add a way to grab the latest changes and bring them to your copy
+  	* In short, you need to add a way to grab the latest changes and pull them to your copy
   	* By doing so, you will be able to have it updated and avoid a few conflicts before they appear
   * Once you do update your repo in your computer, be sure to push the changes to your origin version of the branch
 
@@ -37,7 +37,7 @@ Now, you might have a copy of the repository, but so do other people that want t
  _Now that you have the files, contribute!_
 
 * Open the files in your favorite editor
-* Do a few changes - add html, some css, whatever you want to!
+* Start with small changes, try adding your name to contributors.html, improve css or html code, add a comment, etc.
 * In git, add and commit the files (this will depend on what git are you using, visual or console - read the docs or google around to refresh or if you didn't do the tutorial eariler)
 	* Be sure to add the correct files
 	* Be sure that the commit is a meaningful one - not a 'Added thing' or 'Bla bla bla' one.
