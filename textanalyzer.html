@@ -13,23 +13,28 @@
     <div id="navMenu"></div>
     <!-- this div is filled by the nav.js script, maybe there's a better way to reuse navbar code -->
 
-    <p id="output">Insert text in textbox below and analyze it.
-        <p>
-            <textarea id="textarea" rows="4" cols="60"></textarea>
+    <p id="output">Insert text in textbox below and analyze it.</p>
+    
+	<textarea id="textarea" rows="4" cols="60"></textarea>
 
-            <div class="buttons">
-                <button class="button" onclick="characterCount()">Character Count</a>
-	<button class="button" onclick="spaceCount()">Space Count</a>
-	<button class="button" onclick="upperCase()">Uppercase</a>
-	<button class="button">?</a>
-	<button class="button">?</a>
-	<button class="button">?</a>
-	<button class="button">?</a>
+    <div class="buttons">
+		<button class="button" onclick="characterCount()">Character Count</button>
+		<button class="button" onclick="spaceCount()">Space Count</button>
+		<button class="button" onclick="upperCase()">Uppercase</button>
+		<button class="button" onclick="lowerCase()">Lowercase</button>
+		<button class="button">?</button> 
+		<button class="button">?</button>
+		<br>
+		<button class="button" onclick="reverseString()">Reverse Text</button>
+		<button class="button">?</button>
+		<button class="button">?</button>
+		<button class="button">?</button>
+		<button class="button">?</button>
     </div>
-<script type="text/javascript" src="js/nav.js">
-</script>
-<script type="text/javascript" src="js/textAnalyzer.js">
-</script>
+	
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/textAnalyzer.js"></script>
+
 </body>
 
 </html>
