@@ -15,3 +15,6 @@ function upperCase() { //capitalizes every letter
 function lowerCase() { // Changes all text to lowercase
     document.getElementById("output").innerHTML = document.getElementById("textarea").value.toLowerCase();
 }
+function reverseString() { //reverse string
+    document.getElementById("output").innerHTML = document.getElementById("textarea").value.split("").reverse().join("");
+}
