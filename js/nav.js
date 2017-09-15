@@ -1,4 +1,4 @@
- document.getElementById("navMenu").innerHTML =
+document.getElementById("navMenu").innerHTML =
  		'<nav class="navbar navbar-expand-md bg-primary navbar-dark">'+
         '<div class="container">' +
         '<a class="navbar-brand" href="index.html"><b>GardenSnake Project</b></a>' +
