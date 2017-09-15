@@ -11,3 +11,7 @@ function spaceCount() { //counts total amount of white space
 function upperCase() { //capitalizes every letter
     document.getElementById("output").innerHTML = document.getElementById("textarea").value.toUpperCase();
 }
+
+function lowerCase() { // Changes all text to lowercase
+    document.getElementById("output").innerHTML = document.getElementById("textarea").value.toLowerCase();
+}
