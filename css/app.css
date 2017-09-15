@@ -17,7 +17,6 @@ html {
 .intro {
     background: #ddd;
     font-family: sans-serif;
-    padding: 1.5em 0 1.5em 1em;
     margin-top: 200px;
 }
 .IntroSection {
@@ -58,7 +57,7 @@ h2 {
     width: 300px;
     border: 1px solid #a00;
     border-radius: 7px;
-    margin: 4px;
+    margin: 0px;
     padding: 2px;
     float: left;
     overflow: hidden;
@@ -74,5 +73,6 @@ h2 {
 }
 
 #navMenu {
-	margin-bottom: 3em;
+    width: 100%;
+    margin: 0px;
 }
