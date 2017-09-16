@@ -1,5 +1,5 @@
-# [GardenSnake.github.io](https://gardensnake.github.io/)  
-A collaborative web project.
+# [GardenSnake](https://gardensnake.github.io/)  
+_A collaborative web project._
 
 It's always hard the first time you do something. Reading articles & watching tutorials can help, but what's better than actually trying to do the stuff? This project helps newcomers get right into programming along with others and make something amazing happen. If you're new to GitHub, follow the steps below. 
 
@@ -9,7 +9,7 @@ It's always hard the first time you do something. Reading articles & watching tu
 _Login to your own GitHub account ([or create one if you don't have yet!](https://github.com/)) 
 If you're using Windows, have Git installed on your machine (If you are going with the console git version, be sure to go through a tutorial. They are short and really good. [Here is one, for example](https://try.github.io/))_
 
-### Getting the files in your repo and computer
+## Getting the files in your repo and computer
 *  Click 'Fork' at the top right of this page
 	* This will create a copy of this repository in your account. You basically have your own copy now.
 	* (You only need to fork once, how to update project with latest changes is expained below)
@@ -26,11 +26,11 @@ If you're using Windows, have Git installed on your machine (If you are going wi
 ## Adding content
 _Now that you have the files, contribute!_
 * Open the files in your favorite editor
-* Start with small changes. Begin by adding your name to contributors.html, 
-	* look at previous names listed for help.
-	* You can also choose to add some style to your box by going to css/signature.css
-* If you can, you can try to improve and add css code or html code 
-* Once you get the hang of changing and submitting changes, try to edit and improve any of the beginner projects listed.
+* Start with small changes. Begin by adding your name to contributors.html 
+	* look at the previous names listed for help.
+	* You can also choose to add some style to your box by going into css/signature.css
+	* If you want, you can also add a comment in index.html
+* (Once you are able to successfully submit your changes, you can move on to working on beginner projects listed below).
 
 ## Creating a pull request
  
