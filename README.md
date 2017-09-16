@@ -3,10 +3,9 @@ _A collaborative web project._
 
 It's always hard the first time you do something. Reading articles & watching tutorials can help, but what's better than actually trying to do the stuff? This project helps newcomers get right into programming along with others and make something amazing happen. If you're new to GitHub, follow the steps below. 
 
-## How to Get Started!
+## Gatting Started!
 
-### Before you begin
-_Login to your own GitHub account ([or create one if you don't have yet!](https://github.com/)) 
+**Before you begin:** _Login to your own GitHub account ([or create one if you don't have yet!](https://github.com/)) 
 If you're using Windows, have Git installed on your machine (If you are going with the console git version, be sure to go through a tutorial. They are short and really good. [Here is one, for example](https://try.github.io/))_
 
 ## Getting the files in your repo and computer
