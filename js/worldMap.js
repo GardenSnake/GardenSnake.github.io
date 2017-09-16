@@ -44,12 +44,21 @@ function initMap() {
 		{
 			user: "IKnowBashFu",
 			address: "Bay Ridge, Brooklyn, NY, USA"
-		}
+        },
+        {
+            user: "Snoopy",
+            address: "Columbus, OH, USA"
+        },
+        {
+            user: "KMM",
+            address: "Manchester, UK"
+        },
 
 
   ];
+    
 
-    for (var i = 0; i < contributors.length; i++)
+    for (var i = 0; i < contributors.length; i++) 
         geocoder.geocode({
             "address": contributors[i].address
         }, function (results, status) {
@@ -58,8 +67,20 @@ function initMap() {
                     map: map,
                     position: results[0].geometry.location
                 });
+
+                var contentString = 'Not yet implemented'
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
             }
         });
+
+    
 
 
 
