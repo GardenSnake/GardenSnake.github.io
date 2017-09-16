@@ -22,6 +22,32 @@ If you're using Windows, have Git installed on your machine (If you are going wi
 	* If you have a Git desktop GUI (Graphical User Interface - that means not via console, butusing a program), you can click 'Open in Desktop'
 	* If you are using the git via console, you can use the links that are available there. If you are just starting, it is preferably that you use HTTPS - but you can also use the SSH version. To download it via this way; you should, in the console, nevigate where you want to have the project (E.g. 'My Documets/github') and then do `git clone {url}` (The URL that you copied from the small modal that appears when clicking 'Clone or Downlaod', which reads 'Clone with {mode}', where mode is either HTTPS or SSH, you can switch between the two; [read more here](https://help.github.com/articles/which-remote-url-should-i-use/))
 	* Now you have the files on your local computer!
+	
+## Adding content
+_Now that you have the files, contribute!_
+* Open the files in your favorite editor
+* Start with small changes. Begin by adding your name to contributors.html, 
+	* look at previous names listed for help.
+	* You can also choose to add some style to your box by going to css/signature.css
+* If you can, you can try to improve and add css code or html code 
+* Once you get the hang of changing and submitting changes, try to edit and improve any of the beginner projects listed.
+
+## Creating a pull request
+ 
+
+* In git, add and commit the files (this will depend on what git are you using, visual or console - read the docs or google around to refresh or if you didn't do the tutorial eariler)
+	* Be sure to add the correct files
+	* Be sure that the commit is a meaningful one - not a 'Added thing' or 'Bla bla bla' one.
+* Push them to your repository
+	* If you access now to your fork in GitHub, you should see your changes. But not in the original one - because this is YOUR fork!
+* To publish your changes and make them available to be added to the original repo, you need to create a PULL REQUEST
+	* A pull requests takes all your changes, compares them to the repor you want to add them, and creates a request to put them there
+	* If there are conflicts (Like, if you edited a line that was also edited in the original project) you can still create the pull request, but it cannot be merged until the conflicts are resolved
+	* In the *Pull Request* page, you need to select _where_ you want to add the changes, _from where_ you uploaded them. It could be in between your own work if you have different branches, but this time you need to compare between *forks*
+	* Once you have done this, click 'create Pull Request'. You will now able to see it in the original repository, inside 'Pull Request', and by clicking 'Pull Requests' in GitHub's header while you are logged in.
+* Once the Pull Request is done, the owned of the repo will get notified, and will check it. Owner can Approve, Delete, even suggest changes to the PR
+* With all this, you are all set to have your changes merged in the repository - and wait for it to be merged back to the master branch!
+
 
 ## Getting latest changes from the repository
  _Git is all about collaboration and synchronization_
@@ -35,23 +61,6 @@ Now, you might have a copy of the repository, but so do other people that want t
   * Once you do update your repo in your computer, be sure to push the changes to your origin version of the branch
 
 
-## Adding content and creating a pull request
- _Now that you have the files, contribute!_
-
-* Open the files in your favorite editor
-* Start with small changes, try adding your name to contributors.html, improve css or html code, add a comment, etc.
-* In git, add and commit the files (this will depend on what git are you using, visual or console - read the docs or google around to refresh or if you didn't do the tutorial eariler)
-	* Be sure to add the correct files
-	* Be sure that the commit is a meaningful one - not a 'Added thing' or 'Bla bla bla' one.
-* Push them to your repository
-	* If you access now to your fork in GitHub, you should see your changes. But not in the original one - because this is YOUR fork!
-* To publish your changes and make them available to be added to the original repo, you need to create a PULL REQUEST
-	* A pull requests takes all your changes, compares them to the repor you want to add them, and creates a request to put them there
-	* If there are conflicts (Like, if you edited a line that was also edited in the original project) you can still create the pull request, but it cannot be merged until the conflicts are resolved
-	* In the *Pull Request* page, you need to select _where_ you want to add the changes, _from where_ you uploaded them. It could be in between your own work if you have different branches, but this time you need to compare between *forks*
-	* Once you have done this, click 'create Pull Request'. You will now able to see it in the original repository, inside 'Pull Request', and by clicking 'Pull Requests' in GitHub's header while you are logged in.
-* Once the Pull Request is done, the owned of the repo will get notified, and will check it. Owner can Approve, Delete, even suggest changes to the PR
-* With all this, you are all set to have your changes merged in the repository - and wait for it to be merged back to the master branch!
 
 
 ## Learning Resources
