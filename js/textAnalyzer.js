@@ -18,3 +18,6 @@ function lowerCase() { // Changes all text to lowercase
 function reverseString() { //reverse string
     document.getElementById("output").innerHTML = document.getElementById("textarea").value.split("").reverse().join("");
 }
+function numberCount(){//counts the total amount of numbers in text
+	document.getElementById("output").innerHTML = document.getElementById("textarea").value.replace(/[^0-9]/g,"").length;
+}
