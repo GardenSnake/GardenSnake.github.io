@@ -8,7 +8,7 @@ It's always hard the first time you do something. Reading articles & watching tu
 **Before you begin:** _Login to your own GitHub account ([or create one if you don't have yet!](https://github.com/)) 
 If you're using Windows, have Git installed on your machine (If you are going with the console git version, be sure to go through a tutorial. They are short and really good. [Here is one, for example](https://try.github.io/))_
 
-## Getting the files in your repo and computer
+## Getting the files into your account and computer
 *  Click 'Fork' at the top right of this page
 	* This will create a copy of this repository in your account. You basically have your own copy now.
 	* (You only need to fork once, how to update project with latest changes is expained below)
@@ -32,15 +32,15 @@ _Now that you have the files, contribute!_
 * (Once you are able to successfully submit your changes, you can move on to working on beginner projects listed below).
 
 ## Creating a pull request
+_submit your changes to original repository so everyone can see_
  
-
 * In git, add and commit the files (this will depend on what git are you using, visual or console - read the docs or google around to refresh or if you didn't do the tutorial eariler)
 	* Be sure to add the correct files
-	* Be sure that the commit is a meaningful one - not a 'Added thing' or 'Bla bla bla' one.
+	* Be sure that the comment is a meaningful one - not a 'Added thing' or 'Bla bla bla' one.
 * Push them to your repository
-	* If you access now to your fork in GitHub, you should see your changes. But not in the original one - because this is YOUR fork!
+	* If you access now to your fork in GitHub, you should see your changes in your GitHub account. But not in the original one - because you pushed them to YOUR fork!
 * To publish your changes and make them available to be added to the original repo, you need to create a PULL REQUEST
-	* A pull requests takes all your changes, compares them to the repor you want to add them, and creates a request to put them there
+	* A pull request takes all your changes, compares them to the repo you want to add them, and creates a request to put them there
 	* If there are conflicts (Like, if you edited a line that was also edited in the original project) you can still create the pull request, but it cannot be merged until the conflicts are resolved
 	* In the *Pull Request* page, you need to select _where_ you want to add the changes, _from where_ you uploaded them. It could be in between your own work if you have different branches, but this time you need to compare between *forks*
 	* Once you have done this, click 'create Pull Request'. You will now able to see it in the original repository, inside 'Pull Request', and by clicking 'Pull Requests' in GitHub's header while you are logged in.
