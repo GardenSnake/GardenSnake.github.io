@@ -60,7 +60,7 @@ Now, you might have a copy of the repository, but so do other people that want t
   * Once you do update your repo in your computer, be sure to push the changes to your origin version of the branch
 
 ## Beginner Projects: 
-1. Photo Gallery
+1. Photo Gallery: Displays a series of photos
 2. HTML Functionality 
 
 
