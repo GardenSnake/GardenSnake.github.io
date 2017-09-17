@@ -51,7 +51,7 @@ _submit your changes to original repository so everyone can see_
  _Git is all about collaboration and synchronization_
  
 Now, you might have a copy of the repository, but so do other people that want to contribute. If everybody were to contribute at the same time, a lot of conflicts would appear - imagine that you and somebody else edited line 25 of the index file - which change should be kept? Yours? Theirs? Both?
- Imagine you did fork, but went away on vacations for a month. Changes were made to the main repository - and you need to have the latests things to work on so your new additions will not conflict with anybody else's! You don't need to fork again, you just need to pull the latest changes to your repository.
+ Imagine you did fork, but went away on vacations for a month. Changes were made to the main repository - and you need to have the latests things to work on so your new additions will not conflict with anybody else's! Don't worry, you don't need to fork again, you just need to pull the latest changes to your repository.
 
   * To have the latest changes available - you need to add the original repo as an *Upstream* to your repo. 
   	* These are the [console steps required to do so](https://help.github.com/articles/configuring-a-remote-for-a-fork/) 
@@ -59,7 +59,9 @@ Now, you might have a copy of the repository, but so do other people that want t
   	* By doing so, you will be able to have it updated and avoid a few conflicts before they appear
   * Once you do update your repo in your computer, be sure to push the changes to your origin version of the branch
 
-##Beginner Projects:
+## Beginner Projects: 
+1. Photo Gallery
+2. HTML Functionality 
 
 
 
