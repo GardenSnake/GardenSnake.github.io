@@ -11,7 +11,6 @@ If you're using Windows, have Git installed on your machine (If you are going wi
 ## Getting the files into your account and computer
 *  Click 'Fork' at the top right of this page
 	* This will create a copy of this repository in your account. You basically have your own copy now.
-	* (You only need to fork once, how to update project with latest changes is expained below)
 * Go to your fork
 	* Git redirects you automatically
 	* Else, you can go to GitHub, go to your Profile, and it will be listed there as a project
@@ -50,8 +49,9 @@ _submit your changes to original repository so everyone can see_
 
 ## Getting latest changes from the repository
  _Git is all about collaboration and synchronization_
+ 
 Now, you might have a copy of the repository, but so do other people that want to contribute. If everybody were to contribute at the same time, a lot of conflicts would appear - imagine that you and somebody else edited line 25 of the index file - which change should be kept? Yours? Theirs? Both?
- Imagine you did fork, but went away on vacations for a month. Changes were made to the repo - and you need to have the latests things to work on so your new additions will not conflict with anybody else's!
+ Imagine you did fork, but went away on vacations for a month. Changes were made to the main repository - and you need to have the latests things to work on so your new additions will not conflict with anybody else's! You don't need to fork again, you just need to pull the latest changes to your repository.
 
   * To have the latest changes available - you need to add the original repo as an *Upstream* to your repo. 
   	* These are the [console steps required to do so](https://help.github.com/articles/configuring-a-remote-for-a-fork/) 
@@ -59,6 +59,7 @@ Now, you might have a copy of the repository, but so do other people that want t
   	* By doing so, you will be able to have it updated and avoid a few conflicts before they appear
   * Once you do update your repo in your computer, be sure to push the changes to your origin version of the branch
 
+##Beginner Projects:
 
 
 
