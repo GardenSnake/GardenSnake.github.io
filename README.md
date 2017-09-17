@@ -62,31 +62,31 @@ Now, you might have a copy of the repository, but so do other people that want t
 ## Beginner Projects: 
 Here's a list of beginner projects and suggestions for how newcomers can improve them.
 
-**1. HTML Functionality:** _Visual reference of HTML elements, helps understand the potential of HTML elements_
+**1. HTML Functionality:** _visual reference of HTML elements, helps understand the potential of HTML elements_
 
-* Add new HTML elements that you learned that haven't been added to this page.
+* Add new HTML elements that you learned that haven't been added to this page yet.
 
-**2. Photo Gallery:** _Displays a series of photos_ 
+**2. Photo Gallery:** _displays a series of photos_ 
 
 * add and improve css, decorate the page.
 * add a website header, footer, a navigation bar or other elements to improve functionality
 
-**3. Pokemon Card Drawer:** _Simulates drawing cards from a pack of cards_
+**3. Pokemon Card Drawer:** _simulates drawing cards from a pack of cards_
 
-* add or improve background, header, footer
+* add or stylize background, header, footer to make the appearence better
 * add a reset button.
 * add another pack of cards by working on js/pokemoncard.js file.
 
-**4. World Map of Contributors:** _Displays locations of all contributors_ 
+**4. World Map of Contributors:** _displays locations of all contributors_ 
 
 * Add yourself by editing worldMap.js
 * edit css and improve the outlook of the page
-* add or improve functionality of Google maps api](https://developers.google.com/maps/documentation/javascript/)
+* add or improve functionality of [Google maps api](https://developers.google.com/maps/documentation/javascript/)
 
 **5. Text Analyzer:** _Performs a function on given string_ 
 
 * Implement a function by adding a method in textanalyzer.js and linking it back to a button in textanalyzer.html
-* give the page a cleaner look
+* fix the appearence of the page.
 
 
 
