@@ -2,11 +2,16 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>GardenSnake's Public HTML page</title>
+
   <link rel="stylesheet" type="text/css" href="css/app.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css">
   <link rel="shortcut icon" href="images/favicon.ico">
+  
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
@@ -18,12 +23,12 @@
         <div class="col-md-12 text-white">
           <h1 class="display-3 mb-5">GardenSnake Project</h1>
           <p class="lead mb-5">A collaborative web project.&nbsp;
-            <br>This project helps newcomers get right into programming along with others and make something amazing happen.</p> <i class="fa d-inline fa-angle-down fa-3x"></i> </div>
+            <br>This project helps newcomers get right into programming along with others and make something amazing happen.</p><i class="fa d-inline fa-angle-down fa-3x" id="goDown"></i> </div>
       </div>
     </div>
   </div>
   <!-- this div is filled by the nav.js script, maybe there's a better way to reuse navbar code -->
-  <div class="IntroSection">
+  <div class="IntroSection" id="IntroSection">
     <h1 class="intro">
       <br>Welcome to the GardenSnake project.</h1>
     <p>We are a group of programmers contributing to an open-source project. Our purpose is to build anything
@@ -85,7 +90,7 @@
 		<a class="button group2">???</a>
 	</div>
 </div>
-  
+  <script src="js/main.js"></script>
   <script type="text/javascript" src="js/nav.js"></script>
 </body>
 
