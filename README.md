@@ -93,7 +93,7 @@ Here's a list of beginner projects and suggestions for how newcomers can improve
 ## Learning Resources
 
 * [Git Tutorial for Beginners: Command-Line Fundamentals](https://www.youtube.com/watch?v=HVsySz-h9r4)
-* [Git CodeAcademy Course](https://www.codecademy.com/learn/learn-git)
+* [Git Codecademy Course](https://www.codecademy.com/learn/learn-git)
 * [Git Basics](https://www.theodinproject.com/courses/web-development-101/lessons/git-basics)
 
 _TODO: Explain how to make the `master` branch appear in `https://{username}.github.io/`_
