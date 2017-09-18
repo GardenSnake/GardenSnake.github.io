@@ -93,3 +93,11 @@ text-align: center;
     width: 100%;
     margin: 0px;
 }
+#goDown {
+    background-color: transparent;
+    padding: 2px;
+}
+#goDown:hover {
+    color: black;
+    cursor: pointer;
+}
