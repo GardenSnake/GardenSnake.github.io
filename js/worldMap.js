@@ -54,14 +54,17 @@ function initMap() {
             address: "Manchester, UK"
         },
         {
+            user: 'ad-dan',
+            address: "Pune, India"
+        }
             user: "Firsteo",
             address: "Noida, India"
-        },
+        }
 
   ];
-    
 
-    for (var i = 0; i < contributors.length; i++) 
+
+    for (var i = 0; i < contributors.length; i++)
         geocoder.geocode({
             "address": contributors[i].address
         }, function (results, status) {
@@ -83,7 +86,7 @@ function initMap() {
             }
         });
 
-    
+
 
 
 
