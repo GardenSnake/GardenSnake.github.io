@@ -34,7 +34,8 @@ _Now that you have the files, contribute!_
 _submit your changes to original repository so everyone can see_
  
 * In git, add and commit the files (this will depend on what git are you using, visual or console - read the docs or google around to refresh or if you didn't do the tutorial eariler)
-	* Be sure to add the correct files
+	* Make sure to test your changes on your computer to make sure they work.   
+	* Make sure to add the correct files when you commit. 
 	* Be sure that the comment is a meaningful one - not a 'Added thing' or 'Bla bla bla' one.
 * Push them to your repository
 	* If you access now to your fork in GitHub, you should see your changes in your GitHub account. But not in the original one - because you pushed them to YOUR fork!
