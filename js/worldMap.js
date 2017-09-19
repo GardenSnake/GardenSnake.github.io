@@ -53,7 +53,10 @@ function initMap() {
             user: "KMM",
             address: "Manchester, UK"
         },
-
+        {
+            user: "Firsteo",
+            address: "Noida, India"
+        },
 
   ];
     
