@@ -1,0 +1,58 @@
+body {
+	font-size: 10pt;
+	font-family: arial, sans-serif;
+}
+
+nav{
+	float:right;
+	margin: 7px 21px;
+}
+a{
+text-decoration: none;
+}
+
+nav a:hover {
+	color: #111111;
+	text-decoration: underline;
+}
+
+.search {
+	text-align: center;
+	clear: both;
+	margin: 11% 0 0 0;
+}
+
+#logo {
+	max-width: 33%;
+	margin: 0 auto;
+}
+
+.search img {
+	margin-bottom: 3%;
+	max-width: 100%;
+}
+
+.search input {
+	width: 570px;
+	border: 1px solid #D8D8D8;
+	padding: 5px;
+	font-size: 11pt;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+ 	height: 42px;
+ 	width: 100%;
+ 	font-size: 9.5pt;
+ }
+ 
+ #footer-left {
+	float: left;
+	margin-left: 16px;
+}
+
+#footer-right {
+	float: right;
+	margin-right: 16px;
+}

@@ -62,38 +62,46 @@ Now, you might have a copy of the repository, but so do other people that want t
 ## Beginner Projects: 
 Here's a list of beginner projects and suggestions for how newcomers can improve them.
 
-**1. HTML Functionality:** _visual reference of HTML elements, helps understand the potential of HTML elements_
 
-* Add new HTML elements that you learned that haven't been added to this page yet.
-
-**2. Photo Gallery:** _displays a series of photos_ 
+**1. Photo Gallery:** _displays a series of photos_ 
 
 * add and improve css, decorate the page.
 * add a website header, footer, a navigation bar or other elements to improve functionality
 
-**3. Pokemon Card Drawer:** _simulates drawing cards from a pack of cards_
+**2. HTML Guide:** _visual reference of HTML elements, helps understand the potential of HTML elements_
 
-* add or stylize background, header, footer to make the appearence better
-* add a reset button.
-* add another pack of cards by working on js/pokemoncard.js file.
+* Add new HTML elements that you learned that haven't been added to this page yet.
 
-**4. World Map of Contributors:** _displays locations of all contributors_ 
+**3. World Map of Contributors:** _displays locations of all contributors_ 
 
 * Add yourself by editing worldMap.js
 * edit css and improve the outlook of the page
 * add or improve functionality of [Google maps api](https://developers.google.com/maps/documentation/javascript/)
 
-**5. Text Analyzer:** _Performs a function on given string_ 
+**4. Pokemon Card Drawer:** _simulates drawing cards from a pack of cards_
+
+* add and stylize background, header, footer to make the appearence better
+* add a reset button.
+* add another pack of cards by working on js/pokemoncard.js file.
+
+
+**5. Text Analyzer:** _performs a function on given string_ 
 
 * Implement a function by adding a method in textanalyzer.js and linking it back to a button in textanalyzer.html
 * fix the appearence of the page.
+
+
+**6. Google Clone:** _imitation of Google_ 
+
+* Add, adjust and align HTML elements to match [Google's homepage](https://www.google.com)
+* fix and stylize css to match Google.
 
 
 
 ## Learning Resources
 
 * [Git Tutorial for Beginners: Command-Line Fundamentals](https://www.youtube.com/watch?v=HVsySz-h9r4)
-* [Git CodeAcademy Course](https://www.codecademy.com/learn/learn-git)
+* [Git Codecademy Course](https://www.codecademy.com/learn/learn-git)
 * [Git Basics](https://www.theodinproject.com/courses/web-development-101/lessons/git-basics)
 
 _TODO: Explain how to make the `master` branch appear in `https://{username}.github.io/`_

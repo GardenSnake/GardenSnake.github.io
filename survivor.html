@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Player Movement using onkeydown/onkeyup (Enhanced version)</title>
+    <style type="text/css" media="screen">
+      canvas { border: 4px solid; }
+    </style>
+    <script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-1150473-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+    </script>
+    <script type="text/javascript" charset="utf-8">
+	
+    var Key = {//Key
+		_pressed: {},
+
+		LEFT: 37,
+		UP: 38,
+		RIGHT: 39,
+		DOWN: 40,
+
+		isDown: function(keyCode) {
+		return this._pressed[keyCode];
+		},
+
+		onKeydown: function(event) {
+		this._pressed[event.keyCode] = true;
+		},
+
+		onKeyup: function(event) {
+		delete this._pressed[event.keyCode];
+		}
+    };//Key
+        
+    window.addEventListener('keyup', function(event) { Key.onKeyup(event); }, false);
+    window.addEventListener('keydown', function(event) { Key.onKeydown(event); }, false);
+
+    var Game = {
+		fps: 60,
+		width: 640,
+		height: 480
+    };
+
+    Game._onEachFrame = (function() {//_onEachFrame
+		var requestAnimationFrame = window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
+
+		if (requestAnimationFrame) {
+		return function(cb) {
+		  var _cb = function() { cb(); requestAnimationFrame(_cb); }
+		  _cb();
+		};
+		} else {
+		return function(cb) {
+		  setInterval(cb, 1000 / Game.fps);
+		}
+		}
+    })();//)_onEachFrame
+    
+    Game.start = function() {
+	document.getElementById("startbutton").style.display = "none";//hide start button
+      Game.canvas = document.createElement("canvas");
+      Game.canvas.width = Game.width;
+      Game.canvas.height = Game.height;
+
+      Game.context = Game.canvas.getContext("2d");
+
+      document.body.appendChild(Game.canvas);
+
+      Game.player = new Player();
+	  Game.enemy = new Enemy();
+
+      Game._onEachFrame(Game.run);
+    };
+    
+    Game.run = (function() {//run
+      var loops = 0, skipTicks = 1000 / Game.fps,
+          maxFrameSkip = 10,
+          nextGameTick = (new Date).getTime(),
+          lastGameTick;
+
+      return function() {
+        loops = 0;
+
+        while ((new Date).getTime() > nextGameTick) {
+          Game.update();
+		  Game.isGameOver();
+          nextGameTick += skipTicks;
+          loops++;
+        }
+
+        if (loops) Game.draw();
+      }
+    })();//run
+	
+	Game.isGameOver = function(){
+		if((Game.player.x + Game.player.width > Game.enemy.x) && (Game.player.x < Game.enemy.x +Game.enemy.width) && (Game.player.y < Game.enemy.y + Game.enemy.height) && (Game.player.y + Game.player.height >Game.enemy.y))
+			endGame();
+			
+	}
+	
+	function endGame(){
+	//document.getElementById("startbutton").style.display = "block";//reveal start button
+	document.getElementById("tester").innerHTML = "GAME OVER";
+	throw new Error("game over!");
+	}
+    
+    Game.draw = function() {
+      Game.context.clearRect(0, 0, Game.width, Game.height);
+      Game.player.draw(Game.context);
+	  Game.enemy.draw(Game.context);
+    };
+    
+    Game.update = function() {
+      Game.player.update();
+	  Game.enemy.update();
+    };
+
+    function Player() {
+      this.x = 300;
+      this.y = 300;
+	  this.width = 30;
+	  this.height = 30;
+    }
+	function Enemy(){
+		this.x = 100;  
+		this.y = 100;
+		this.width = 32;
+		this.height = 32;
+		this.left = true;
+		this.down = true;
+	}
+	
+	Enemy.prototype.update = function() {
+		if(this.x <10) this.left = false;
+		if(this.x >Game.width) this.left = true;
+		if(this.y>Game.height) this.down = false;
+		if(this.y<10) this.down = true;
+	
+		if(this.left) this.moveLeft();
+		if(this.down) this.moveDown();
+		if(!this.left) this.moveRight();
+		if(!this.down) this.moveUp();
+    };
+	
+	Enemy.prototype.draw = function(context) {
+	context.fillStyle="#FF0000";
+      context.fillRect(this.x, this.y, this.width, this.height);
+    };
+
+    Player.prototype.draw = function(context) {
+	context.fillStyle="#000000";
+      context.fillRect(this.x, this.y, this.width, this.height);
+	  //document.getElementById("tester").innerHTML = this.x + " : " + this.y + " : " + (this.x + this.width) + " : " + (this.y+this.height);
+    };
+
+    Player.prototype.moveLeft = function() {
+      this.x -= 1;
+    };
+
+    Player.prototype.moveRight = function() {
+      this.x += 1;
+    };
+
+    Player.prototype.moveUp = function() {
+      this.y -= 1;
+    };
+
+    Player.prototype.moveDown = function() {
+      this.y += 1;
+    };
+	
+	Enemy.prototype.moveLeft = function() {
+      this.x -= 1;
+    };
+
+    Enemy.prototype.moveRight = function() {
+      this.x += 1;
+    };
+
+    Enemy.prototype.moveUp = function() {
+      this.y -= 1;
+    };
+
+    Enemy.prototype.moveDown = function() {
+      this.y += 1;
+    };
+    
+    Player.prototype.update = function() {
+		if (Key.isDown(Key.UP)) this.moveUp();
+		if (Key.isDown(Key.LEFT)) this.moveLeft();
+		if (Key.isDown(Key.DOWN)) this.moveDown();
+		if (Key.isDown(Key.RIGHT)) this.moveRight();
+    };
+    </script>
+  </head>
+  <body>
+  
+  <button id="startbutton" onclick="Game.start()">Start game</button>
+  <p id="tester">Press arrow keys to move</p>
+  </body>
+</html>
