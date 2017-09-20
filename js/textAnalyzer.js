@@ -3,7 +3,7 @@ const output = document.getElementById("output");
 const input = document.getElementById("textarea");
 
 function characterCount() { //counts total amount of characters
-    output.innerHTML = input.value.length;
+    characterCounter.innerHTML = input.value.length;
 }
 
 function spaceCount() { //counts total amount of white space

@@ -16,10 +16,9 @@
 
     <p id="output">Insert text in textbox below and analyze it.</p>
     
-	<textarea id="textarea" rows="4" cols="60"></textarea>
+	<textarea id="textarea" rows="4" cols="60" oninput="characterCount()"></textarea>
 
     <div class="buttons">
-		<button class="button" onclick="characterCount()">Character Count</button>
 		<button class="button" onclick="spaceCount()">Space Count</button>
 		<button class="button" onclick="upperCase()">Uppercase</button>
 		<button class="button" onclick="lowerCase()">Lowercase</button>
@@ -32,8 +31,11 @@
 		<button class="button">?</button>
 		<button class="button">?</button>
 		<button class="button">?</button>
-    </div>
-	
+	</div>
+
+	<div>
+		Character counter: <div id="characterCounter">0</div>
+	</div>
 	
 	
 <script type="text/javascript" src="js/nav.js"></script>

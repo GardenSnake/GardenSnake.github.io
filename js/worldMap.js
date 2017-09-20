@@ -57,9 +57,13 @@ function initMap() {
             user: 'ad-dan',
             address: "Pune, India"
         },
-	{
+        {
             user: "Firsteo",
             address: "Noida, India"
+        },
+        {
+            user: "MathijsHaakman",
+            address: "Wervershoof, Netherlands"
         }
 
   ];
