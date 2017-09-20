@@ -75,7 +75,7 @@ Here's a list of beginner projects and suggestions for how newcomers can improve
 
 **3. World Map of Contributors:** _displays locations of all contributors_ 
 
-* Add yourself by editing worldMap.js
+* Add yourself by editing data/contributors.js file
 * edit css and improve the outlook of the page
 * add or improve functionality of [Google maps api](https://developers.google.com/maps/documentation/javascript/)
 
