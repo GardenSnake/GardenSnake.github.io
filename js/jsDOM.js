@@ -17,7 +17,7 @@ toColor.addEventListener('input', function(){
 
 // *** LIST  [start]
 
-let  form = document.getElementById('addForm');
+let form = document.getElementById('addForm');
 let itemList = document.getElementById('items');
 
 //adding items:
@@ -27,20 +27,22 @@ function addItem(e) {
   e.preventDefault(); //prevent normal submition of html form
   let newItem = document.getElementById('item');
   
-  if(newItem.value){
+  // trim removes whitespace from input; and check that there is at least 1 character in it
+  if(newItem.value.trim().length > 0){ 
     let li = document.createElement('li');
     li.className = 'list-item';
-    li.appendChild(document.createTextNode(newItem.value));
+    li.appendChild(document.createTextNode(newItem.value + " "));
   
     let delBtn = document.createElement('button'); 
     delBtn.appendChild(document.createTextNode('X'));
     delBtn.className = 'delBtn'
     li.appendChild(delBtn); //adds button to created li
-
     itemList.appendChild(li);
+
   } else {
     window.alert("Enter something");
   }
+  document.getElementById("item").value = '' // Clears the input
 }
 
 //removing items:
