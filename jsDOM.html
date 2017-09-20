@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style>
+		.box {
+			padding: 5px;
+			margin: 5px;
+		}
+		ul {
+			list-style-type: none;
+		}
+	</style>
+
+
+    <title>jsDOM</title>
+</head>
+<body>
+<h1>Javascript Snippets for DOM Manipulation</h1>
+
+<fieldset>
+	<legend>Menu Outputs Choice</legend>
+	<span>Choice: </span>
+	<select id="inFromUser">
+		<optgroup label="Swedish Cars">
+			<option value="Volvo">Volvo</option>
+			<option value="Saab">Saab</option>
+		</optgroup>
+		<optgroup label="German Cars">
+			<option value="Mercedes">Mercedes</option>
+			<option value="Audi">Audi</option>
+		</optgroup>
+  </select>
+  <span>Output: <span id="output"></span></span>
+</fieldset>
+
+<div id="changeC" style="background-color: green; " class="box">
+	<span>Changing styles</span><br>
+	<label for="select">Color: </label>
+	<select id="colorIn">	
+			<option value="green">Green</option>
+			<option value="yellow">Yellow</option>
+			<option value="purple">Purple</option>
+			<option value="cyan">Cyan</option>
+	</select>
+
+</div>
+
+<div class="list box" style="border: 1px solid #000;">
+	<h2>Add Items //only frontend</h2>
+	<p>If anyone wants to add a backend to this, please feel free to do that</p>
+	<form id="addForm">
+		<input type="text" id="item">
+		<input type="submit" value="Submit">
+	</form>
+	<h3>Items: </h3>
+	<ul id="items">
+		<li class="list-item">Item 1 <button class="delBtn">X</button></li>
+		<li class="list-item">Item 2 <button class="delBtn">X</button></li>
+		<li class="list-item">Item 3 <button class="delBtn">X</button></li>
+		<li class="list-item">Item 4 <button class="delBtn">X</button></li>
+	</ul>
+</div>
+
+<script src="js/jsDOM.js"></script>
+</body>
+</html>
