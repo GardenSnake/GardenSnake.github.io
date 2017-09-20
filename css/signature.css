@@ -65,3 +65,11 @@
     bottom: 0;
     font-size:25px;
 }
+#firsteo {
+	background-image: url("../images/firsteo.jpg");
+    text-align: center;
+    font-weight: bolder;
+	color: #000;
+	font-size: 2em;
+	background-repeat: no-repeat;
+}
