@@ -1,0 +1,75 @@
+/*
+    Default theme: https://color.adobe.com/Copy-of-Sunset-Camping-color-theme-9928711/
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+body{
+        margin: 0px;
+        padding: 0px;
+    }
+.banner{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    text-align: left;
+    height: 10vh;
+    width: 100%;
+    background-color: #540032;
+}
+#title{
+    position: relative;
+    bottom: 0;
+    font-family: 'Pacifico',sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+}
+.message-container{
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #540032;
+    margin-bottom: 0;
+}
+.chat-container{
+    margin-top: -25px;
+    background-color: #2E112D;
+    height: 75vh;
+    width: 100%;
+}
+#msg{
+    display: inline-block;
+    width: 75%;
+    height: 11vh;
+    max-height: 10vh;
+    overflow: scroll;
+    margin-left: 1vw;
+    font-size: 60px;
+}
+#send-btn{
+    position: absolute;
+    top: 0;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+    height: 11vh;
+    background-color: red;
+
+}
+.msg-box{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+}
+#snd-txt{
+    position: relative;
+    font-family: cursive;
+    top: 15%;
+    left: 25%;
+}

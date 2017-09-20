@@ -5,35 +5,45 @@
 
 
 
-   <link rel="stylesheet" type="text/css" href="chat.css">
+   <link rel="stylesheet" href="./css/chat.css">
    <script src='https://cdn.firebase.com/js/client/2.4.0/firebase.js'></script>
   </head>
   <body>
+      <div class="banner">
+        <span id='title'>GardenSnake Chatroom</span>
+      </div>
+    <div class="chat-container">
+        <h1>This chat does not work yet, please do not try to message people</h1>
 
-  	<h1>This chat does not work yet, please do not try to message people</h1>
-    
-     <input id="username" type="text" placeholder="Name"><br/>
-     <input id="text" type="text" placeholder="Message"><br/>
-     <button id="post">Post</button><br/>
-    <div id="results"></div>
-  
-  <script>
+         <input id="username" type="text" placeholder="Name"><br/>
+         <input id="text" type="text" placeholder="Message"><br/>
+         <button id="post">Post</button><br/>
+        <div id="results"></div>
 
-     var myFirebase = new Firebase('https://chat-179917.firebaseio.com/');
-    var usernameInput = document.querySelector('#username');
-    var textInput = document.querySelector('#text');
-    var postButton = document.querySelector('#post');
+      <script>
 
-    postButton.addEventListener("click", function() {
-      var msgUser = usernameInput.value;
-      var msgText = textInput.value;
-      myFirebase.set(msgUser + " says: " + msgText);
-      textInput.value = "";
-    });
-    
-  </script>
-    
-    <h4><a href="https://discord.gg/yjwTHpK">Until then, use this temporary chat room instead</a></h4> 
+         var myFirebase = new Firebase('https://chat-179917.firebaseio.com/');
+        var usernameInput = document.querySelector('#username');
+        var textInput = document.querySelector('#text');
+        var postButton = document.querySelector('#post');
 
+        postButton.addEventListener("click", function() {
+          var msgUser = usernameInput.value;
+          var msgText = textInput.value;
+          myFirebase.set(msgUser + " says: " + msgText);
+          textInput.value = "";
+        });
+
+      </script>
+
+        <h4><a href="https://discord.gg/yjwTHpK">Until then, use this temporary chat room instead</a></h4>
+    </div>
+
+    <div class="message-container">
+        <div class="msg-box">
+            <input type="text" id='msg' placeholder="Type your message">
+            <div id='send-btn'><span id='snd-txt'>Send!</span></div>
+        </div>
+    </div>
     </body>
     </html>
