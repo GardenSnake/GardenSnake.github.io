@@ -96,7 +96,7 @@ Here's a list of beginner projects and suggestions for how newcomers can improve
 
 * Add, adjust and align HTML elements to match [Google's homepage](https://www.google.com)
 * fix and stylize css to match Google.
-
+ 
 
 
 ## Learning Resources
