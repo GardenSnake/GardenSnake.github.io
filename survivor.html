@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Player Movement using onkeydown/onkeyup (Enhanced version)</title>
     <style type="text/css" media="screen">
       canvas { border: 4px solid; }
     </style>
+	
+	<!-- Ignore this script file, i'm not sure if this is needed. -->
     <script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-1150473-1']);
@@ -16,9 +18,11 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
     </script>
+	
+	<!--Main script file starts here. You can find the base code for the game loop at http://nokarma.org -->
     <script type="text/javascript" charset="utf-8">
 	
-    var Key = {//Key
+    var Key = {//MANAGE KEY PRESSES
 		_pressed: {},
 
 		LEFT: 37,
@@ -26,22 +30,17 @@
 		RIGHT: 39,
 		DOWN: 40,
 
-		isDown: function(keyCode) {
-		return this._pressed[keyCode];
-		},
+		isDown: function(keyCode) { return this._pressed[keyCode]; },
 
-		onKeydown: function(event) {
-		this._pressed[event.keyCode] = true;
-		},
+		onKeydown: function(event) { this._pressed[event.keyCode] = true; },
 
-		onKeyup: function(event) {
-		delete this._pressed[event.keyCode];
-		}
-    };//Key
+		onKeyup: function(event) { delete this._pressed[event.keyCode]; }
+    };
         
     window.addEventListener('keyup', function(event) { Key.onKeyup(event); }, false);
     window.addEventListener('keydown', function(event) { Key.onKeydown(event); }, false);
-
+	//MANAGE KEY PRESSES
+	
     var Game = {
 		fps: 60,
 		width: 640,
@@ -63,23 +62,24 @@
 		}
     })();//)_onEachFrame
     
-    Game.start = function() {
-	document.getElementById("startbutton").style.display = "none";//hide start button
-      Game.canvas = document.createElement("canvas");
-      Game.canvas.width = Game.width;
-      Game.canvas.height = Game.height;
+    Game.start = function() {//START: Initialize Game
+		document.getElementById("startbutton").style.display = "none";//hide start button
+		document.getElementById("directions").style.display = "block";//display arrow directions
+		Game.canvas = document.createElement("canvas");
+		Game.canvas.width = Game.width;
+		Game.canvas.height = Game.height;
 
-      Game.context = Game.canvas.getContext("2d");
+		Game.context = Game.canvas.getContext("2d");
 
-      document.body.appendChild(Game.canvas);
+		document.body.appendChild(Game.canvas);
 
-      Game.player = new Player();
-	  Game.enemy = new Enemy();
+		Game.player = new Player();
+		Game.enemy = new Enemy();
 
-      Game._onEachFrame(Game.run);
-    };
+		Game._onEachFrame(Game.run);
+    };//START: Initialize Game
     
-    Game.run = (function() {//run
+    Game.run = (function() {//RUN: Main Game Loop
       var loops = 0, skipTicks = 1000 / Game.fps,
           maxFrameSkip = 10,
           nextGameTick = (new Date).getTime(),
@@ -97,20 +97,25 @@
 
         if (loops) Game.draw();
       }
-    })();//run
+    })();//RUN: Main Game Loop
 	
+	//Check to see if enemy hit player. If true, game is over
 	Game.isGameOver = function(){
 		if((Game.player.x + Game.player.width > Game.enemy.x) && (Game.player.x < Game.enemy.x +Game.enemy.width) && (Game.player.y < Game.enemy.y + Game.enemy.height) && (Game.player.y + Game.player.height >Game.enemy.y))
-			endGame();
-			
+			Game.endGame();		
 	}
 	
-	function endGame(){
-	//document.getElementById("startbutton").style.display = "block";//reveal start button
-	document.getElementById("tester").innerHTML = "GAME OVER";
-	throw new Error("game over!");
+	//Player was hit. End game.
+	Game.endGame = function(){
+		document.getElementById("directions").innerHTML = "GAME OVER";
+		throw new Error("game over!"); //throw error ends script
+	}
+	
+	//Restart: reload page.
+	Game.restart = function(){
 	}
     
+	/*The rest of the functions are to update location and draw both player and enemy */
     Game.draw = function() {
       Game.context.clearRect(0, 0, Game.width, Game.height);
       Game.player.draw(Game.context);
@@ -138,10 +143,13 @@
 	}
 	
 	Enemy.prototype.update = function() {
-		if(this.x <10) this.left = false;
-		if(this.x >Game.width) this.left = true;
-		if(this.y>Game.height) this.down = false;
-		if(this.y<10) this.down = true;
+	
+		if((Math.floor(Math.random() * 29))>27){
+		if(this.x < Game.player.x) this.left = false;
+		if(this.x >Game.player.x) this.left = true;
+		if(this.y>Game.player.y) this.down = false;
+		if(this.y<Game.player.y) this.down = true;
+		}
 	
 		if(this.left) this.moveLeft();
 		if(this.down) this.moveDown();
@@ -155,9 +163,8 @@
     };
 
     Player.prototype.draw = function(context) {
-	context.fillStyle="#000000";
-      context.fillRect(this.x, this.y, this.width, this.height);
-	  //document.getElementById("tester").innerHTML = this.x + " : " + this.y + " : " + (this.x + this.width) + " : " + (this.y+this.height);
+		context.fillStyle="#000000";
+		context.fillRect(this.x, this.y, this.width, this.height);
     };
 
     Player.prototype.moveLeft = function() {
@@ -198,11 +205,10 @@
 		if (Key.isDown(Key.DOWN)) this.moveDown();
 		if (Key.isDown(Key.RIGHT)) this.moveRight();
     };
-    </script>
-  </head>
-  <body>
-  
-  <button id="startbutton" onclick="Game.start()">Start game</button>
-  <p id="tester">Press arrow keys to move</p>
-  </body>
+	</script>
+</head>
+<body>
+	<button id="startbutton" onclick="Game.start()">Demo Game</button>
+	<p id="directions" style="margin-left: 280px;" hidden>Press arrow keys to move</p>
+</body>
 </html>
