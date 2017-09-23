@@ -29,7 +29,7 @@
 }
 
 #karlsol {
-	background-color: grey;	
+	background-color: grey;
 }
 
 #Morgan_R {
@@ -72,4 +72,11 @@
 	color: #000;
 	font-size: 2em;
 	background-repeat: no-repeat;
+}
+#ad-dan{
+    background-image: url('../images/hanzo.png');
+    text-align: center;
+    font-size: 30px;
+    color: rgb(8, 5, 68);
+    font-weight: 900;
 }
