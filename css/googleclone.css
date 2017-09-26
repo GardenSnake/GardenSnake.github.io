@@ -3,17 +3,23 @@ body {
 	font-family: arial, sans-serif;
 }
 
-nav{
+nav {
 	float:right;
 	margin: 7px 21px;
 }
-a{
+
+a   {
 text-decoration: none;
 }
 
 nav a:hover {
 	color: #111111;
 	text-decoration: underline;
+}
+
+p a:hover {
+    color: #111111;
+    text-decoration: underline;
 }
 
 .search {
@@ -28,24 +34,27 @@ nav a:hover {
 }
 
 .search img {
+    margin-top:175px;
 	margin-bottom: 3%;
-	max-width: 100%;
+	max-width: 50%;
 }
 
 .search input {
-	width: 570px;
-	border: 1px solid #D8D8D8;
-	padding: 5px;
-	font-size: 11pt;
+    width: 570px;
+    border: 1px solid #D8D8D8;
+    padding: 15px;
+    font-size: 11pt;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
- 	height: 42px;
- 	width: 100%;
- 	font-size: 9.5pt;
- }
+    position: fixed;
+    bottom: 0;
+    height: 42px;
+    width: 100%;
+    font-size: 10pt;
+    background-color: #F2F2F2;
+}
  
  #footer-left {
 	float: left;
@@ -55,4 +64,23 @@ footer {
 #footer-right {
 	float: right;
 	margin-right: 16px;
+}
+
+footer a {
+    padding:15px;
+}
+
+#search-button button {
+    margin-top: 30px;
+    margin-right: 5px;
+    margin-left:5px;
+    background-color: #F2F2F2;
+    padding: 10px 15px;
+    color: #757575;
+    font-weight:bold;
+    border:1px solid #F2F2F2;
+}
+
+#search-button button:hover {
+    background-color:lightgrey;
 }
