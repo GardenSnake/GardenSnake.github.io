@@ -5,15 +5,15 @@
     <title>Text Analyzer </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css">
-
+	<link rel="stylesheet" type="text/css" href="css/textAnalyzer.css">
 </head>
 
 <body>
-
     <div id="navMenu"></div>
     <!-- this div is filled by the nav.js script, maybe there's a better way to reuse navbar code -->
 	<!-- Implement an additional action to this program by adding a method in textanalyzer.js and linking it back to a button in this file.-->
 
+	<div id="container">
     <p id="output">Insert text in textbox below and analyze it.</p>
     
 	<textarea id="textarea" rows="4" cols="60" oninput="characterCount()"></textarea>
@@ -35,6 +35,7 @@
 
 	<div>
 		Character counter: <div id="characterCounter">0</div>
+	</div>
 	</div>
 	
 	
