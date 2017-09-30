@@ -27,3 +27,11 @@ function reverseString() { //reverse string
 function numberCount() { //counts the total amount of numbers in text
     output.innerHTML = input.value.replace(/\D/g, "").length;
 }
+
+function vowelCount() { // counts the number of vowels
+    output.innerHTML = input.value.match(/[aeiou]/gi || []).length;
+}
+
+function consonantCount() { // counts the number of consonants
+    output.innerHTML = input.value.match(/[bcdfghjklmnpqrstvxzwy]/gi || []).length;
+}
