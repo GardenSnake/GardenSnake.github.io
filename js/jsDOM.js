@@ -74,6 +74,10 @@ function handleSearchBoxChange(event) {
 
 
 // ** Mosaic Generator
+/*
+* add a click listener on the entire parent cell and then 4 click listners
+* on each child div 
+*/
 const arrayColors = ['#39f7ed', '#2e0087', '#fff', '#8af5ef',
   '#aaefeb', '#9e6ef9', '#eaeaea', '#7f45ec',
   '#def3f2', '#cebaf5', '#8d59ef',
