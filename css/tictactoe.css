@@ -2,5 +2,7 @@
 .square{
     width:250px;
     height:250px;
-	  border:1px solid #000;
+	border:1px solid #000;
+    text-align: center;
+    font-size: 10em;
 }
