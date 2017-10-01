@@ -12,6 +12,29 @@
 		ul {
 			list-style-type: none;
 		}
+
+		/* These Styles are for the Grid */
+		.square {
+		  width: 50%;
+		  height: 50%;
+		  display: inline-block;
+		  float:left;
+		  box-sizing: content-box
+		}
+
+		.parent {
+		  width: 300px;
+		  height: 300px;
+		  box-sizing: content-box;
+		  background: #fff;
+		  box-shadow: 0px 0px 100px #eaeaea
+		}
+
+		.base-style-class {
+		  display: inline-block;
+		  float:left;
+		  box-sizing: content-box
+		}
 	</style>
 
 
@@ -63,6 +86,25 @@
 		<li class="list-item">Item 4 <button class="delBtn">X</button></li>
 	</ul>
 </div>
+
+<div class="search-container" style="border: 1px solid #000; margin-top: 10px; padding: 10px">
+	<h2>Type in the search box</h2>
+	<h3> Simple 2 way binding mechanism.</h3>
+	<input type="text" class="search-box" style="padding: 10px; font-size: 14px"/>
+	<span id="search-output"></span>
+</div>
+
+<div style="border: 1px solid #000; margin-top: 10px; padding: 10px">
+	<h2>Click anywhere on the square below and watch the split of divs</h2>
+	<div class="parent">
+	  <div class="square"></div>
+	  <div class="square"></div>
+	  <div class="square"></div>
+	  <div class="square"></div> 
+	</div>
+</div>
+
+
 
 <script src="js/jsDOM.js"></script>
 </body>
