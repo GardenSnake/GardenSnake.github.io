@@ -7,6 +7,10 @@
 
 var contributors = [
 	{
+		user: "flyg101",
+		address: "Abuja, NG"
+	},
+	{
 		user: "visampaio",
 		address: "Toronto, ON"
 	},

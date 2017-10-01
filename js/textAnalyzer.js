@@ -39,3 +39,13 @@ function consonantCount() { // counts the number of consonants
 function wordCount(){ //counts the number of words
     output.innerHTML = input.value.split(" ").length;
 }
+
+function pascalCase() { // Capitalize all first characters
+    output.innerHTML = input.value.replace(/\s/g, ' ').split(' ').map(function(word) {
+        if(word) {
+            return word[0].toUpperCase() + word.slice(1)
+        } else {
+            return '';
+        }
+    }).join(' ');
+}
