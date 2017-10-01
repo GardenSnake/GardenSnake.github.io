@@ -58,3 +58,53 @@ function removeItem(e){
 }
 
 // *** LIST [end]
+
+
+// ** Search bar
+
+const searchBox = document.querySelector('.search-box');
+const searchOutput = document.getElementById('search-output');
+searchBox.addEventListener('keydown', handleSearchBoxChange);
+
+function handleSearchBoxChange(event) {
+  searchOutput.innerText = event.target.value;
+}
+
+// *** Search bar [end]
+
+
+// ** Mosaic Generator
+/*
+* add a click listener on the entire parent cell and then 4 click listners
+* on each child div 
+*/
+const arrayColors = ['#39f7ed', '#2e0087', '#fff', '#8af5ef',
+  '#aaefeb', '#9e6ef9', '#eaeaea', '#7f45ec',
+  '#def3f2', '#cebaf5', '#8d59ef',
+  '#2e0087' , '#FAFAFA', '#E0E0E0',      '#4DD0E1'  
+  ];
+
+const squares = document.querySelectorAll('.square');
+
+squares.forEach((sq) => {
+  sq.addEventListener('click', handlerClick)
+})
+
+function handlerClick(element) {
+  const height = element.target.offsetHeight;
+  const width = element.target.offsetWidth;
+
+  const widthChild = width / 2;
+  for(var i =1 ; i <= 4; i++) {
+     const childElem = document.createElement("div");
+    childElem.className = 'base-style-class';
+    childElem.style.width = '50%';
+    childElem.style.height = '50%';
+    childElem.style.background = arrayColors[Math.floor(Math.random() * arrayColors.length)];
+    childElem.addEventListener('click', handlerClick);
+
+    element.target.appendChild(childElem)
+  }
+  
+  element.stopPropagation()
+}
