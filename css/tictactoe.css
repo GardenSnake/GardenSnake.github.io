@@ -2,7 +2,24 @@
 .square{
     width:250px;
     height:250px;
-	border:1px solid #000;
+    border:1px solid #000;
     text-align: center;
     font-size: 10em;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.reset {
+  background-color: #a21616;
+  color: #ffe9e9;
 }

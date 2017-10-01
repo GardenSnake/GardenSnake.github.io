@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		TicTacToe
-	</title>
-	<link rel="stylesheet" type="text/css" href="css/tictactoe.css">
-	<script type="text/javascript" src="js/tictactoe.js"></script>
+  <title>
+    TicTacToe
+  </title>
+  <link rel="stylesheet" type="text/css" href="css/tictactoe.css">
+  <script type="text/javascript" src="js/tictactoe.js"></script>
 </head>
-	
+
 <body onload="startGame()">
 <div id="board">
     <table>
@@ -27,6 +27,15 @@
         <td class="square" id="square9" onclick="nextMove(this)" ></td>
       </tr>
     </table>
+</div>
+
+<input type="button" value="Reset Board" class="button reset" onclick="resetBoard()">
+<input type="button" value="Reset Match" class="button reset" onclick="resetMatch()">
+
+<div id="results">
+  X: 0
+  <br>
+  O: 0
 </div>
 
 </body>
