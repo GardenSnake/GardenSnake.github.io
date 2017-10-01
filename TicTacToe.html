@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>
-    TicTacToe
-  </title>
-  <link rel="stylesheet" type="text/css" href="css/tictactoe.css">
-  <script type="text/javascript" src="js/tictactoe.js"></script>
+	<title>
+		TicTacToe
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/tictactoe.css">
+	<script type="text/javascript" src="js/tictactoe.js"></script>
 </head>
 
 <body onload="startGame()">
 <div id="board">
-    <table>
-      <tr id="row1">
-        <td class="square" id="square1" onclick="nextMove(this)" ></td>
-        <td class="square" id="square2" onclick="nextMove(this)" ></td>
-        <td class="square" id="square3" onclick="nextMove(this)" ></td>
-      </tr>
-      <tr id="row2">
-        <td class="square" id="square4" onclick="nextMove(this)" ></td>
-        <td class="square" id="square5" onclick="nextMove(this)" ></td>
-        <td class="square" id="square6" onclick="nextMove(this)" ></td>
-      </tr>
-      <tr id="row3">
-        <td class="square" id="square7" onclick="nextMove(this)" ></td>
-        <td class="square" id="square8" onclick="nextMove(this)" ></td>
-        <td class="square" id="square9" onclick="nextMove(this)" ></td>
-      </tr>
-    </table>
+	<table>
+		<tr id="row1">
+			<td class="square" id="square1" onclick="nextMove(this)" ></td>
+			<td class="square" id="square2" onclick="nextMove(this)" ></td>
+			<td class="square" id="square3" onclick="nextMove(this)" ></td>
+		</tr>
+		<tr id="row2">
+			<td class="square" id="square4" onclick="nextMove(this)" ></td>
+			<td class="square" id="square5" onclick="nextMove(this)" ></td>
+			<td class="square" id="square6" onclick="nextMove(this)" ></td>
+		</tr>
+		<tr id="row3">
+			<td class="square" id="square7" onclick="nextMove(this)" ></td>
+			<td class="square" id="square8" onclick="nextMove(this)" ></td>
+			<td class="square" id="square9" onclick="nextMove(this)" ></td>
+		</tr>
+	</table>
 </div>
 
 <input type="button" value="Reset Board" class="button reset" onclick="resetBoard()">
 <input type="button" value="Reset Match" class="button reset" onclick="resetMatch()">
 
 <div id="results">
-  X: 0
-  <br>
-  O: 0
+	X: 0
+	<br>
+	O: 0
 </div>
 
 </body>
