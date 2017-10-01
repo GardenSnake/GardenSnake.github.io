@@ -35,3 +35,7 @@ function vowelCount() { // counts the number of vowels
 function consonantCount() { // counts the number of consonants
     output.innerHTML = input.value.match(/[bcdfghjklmnpqrstvxzwy]/gi || []).length;
 }
+
+function wordCount(){ //counts the number of words
+    output.innerHTML = input.value.split(" ").length;
+}
