@@ -22,7 +22,7 @@
 	<!--Main script file starts here. You can find the base code for the game loop at http://nokarma.org -->
     <script type="text/javascript" charset="utf-8">
 	
-    var Key = {//MANAGE KEY PRESSES
+    var Key = {//*******************************MANAGE KEY PRESSES
 		_pressed: {},
 
 		LEFT: 37,
@@ -39,7 +39,7 @@
         
     window.addEventListener('keyup', function(event) { Key.onKeyup(event); }, false);
     window.addEventListener('keydown', function(event) { Key.onKeydown(event); }, false);
-	//MANAGE KEY PRESSES
+	//*******************************************MANAGE KEY PRESSES
 	
     var Game = {
 		fps: 60,
@@ -47,7 +47,7 @@
 		height: 480
     };
 
-    Game._onEachFrame = (function() {//_onEachFrame
+    Game._onEachFrame = (function() {//**********_onEachFrame
 		var requestAnimationFrame = window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
 
 		if (requestAnimationFrame) {
@@ -60,9 +60,9 @@
 		  setInterval(cb, 1000 / Game.fps);
 		}
 		}
-    })();//)_onEachFrame
+    })();//**************************************_onEachFrame
     
-    Game.start = function() {//START: Initialize Game
+    Game.start = function() {//******************START: Initialize Game
 		document.getElementById("startbutton").style.display = "none";//hide start button
 		document.getElementById("directions").style.display = "block";//display arrow directions
 		Game.canvas = document.createElement("canvas");
@@ -77,9 +77,9 @@
 		Game.enemy = new Enemy();
 
 		Game._onEachFrame(Game.run);
-    };//START: Initialize Game
+    };//*****************************************START: Initialize Game
     
-    Game.run = (function() {//RUN: Main Game Loop
+    Game.run = (function() {//*******************RUN: Main Game Loop
       var loops = 0, skipTicks = 1000 / Game.fps,
           maxFrameSkip = 10,
           nextGameTick = (new Date).getTime(),
@@ -97,7 +97,7 @@
 
         if (loops) Game.draw();
       }
-    })();//RUN: Main Game Loop
+    })();//**************************************RUN: Main Game Loop
 	
 	//Check to see if enemy hit player. If true, game is over
 	Game.isGameOver = function(){
@@ -115,24 +115,17 @@
 	Game.restart = function(){
 	}
     
-	/*The rest of the functions are to update location and draw both player and enemy */
-    Game.draw = function() {
-      Game.context.clearRect(0, 0, Game.width, Game.height);
-      Game.player.draw(Game.context);
-	  Game.enemy.draw(Game.context);
-    };
-    
-    Game.update = function() {
-      Game.player.update();
-	  Game.enemy.update();
-    };
+	/*The rest of the functions below are to update location and draw both player and enemy */
 
+	//define player
     function Player() {
       this.x = 300;
       this.y = 300;
 	  this.width = 30;
 	  this.height = 30;
     }
+	
+	//define enemy
 	function Enemy(){
 		this.x = 100;  
 		this.y = 100;
@@ -142,29 +135,17 @@
 		this.down = true;
 	}
 	
-	Enemy.prototype.update = function() {
-	
-		if((Math.floor(Math.random() * 29))>27){
-		if(this.x < Game.player.x) this.left = false;
-		if(this.x >Game.player.x) this.left = true;
-		if(this.y>Game.player.y) this.down = false;
-		if(this.y<Game.player.y) this.down = true;
-		}
-	
-		if(this.left) this.moveLeft();
-		if(this.down) this.moveDown();
-		if(!this.left) this.moveRight();
-		if(!this.down) this.moveUp();
+	Game.update = function() {
+      Game.player.update();
+	  Game.enemy.update();
     };
 	
-	Enemy.prototype.draw = function(context) {
-	context.fillStyle="#FF0000";
-      context.fillRect(this.x, this.y, this.width, this.height);
-    };
-
-    Player.prototype.draw = function(context) {
-		context.fillStyle="#000000";
-		context.fillRect(this.x, this.y, this.width, this.height);
+	//Player movement, depends on arrow keys pressed.
+	Player.prototype.update = function() {
+		if (Key.isDown(Key.UP)) this.moveUp();
+		if (Key.isDown(Key.LEFT)) this.moveLeft();
+		if (Key.isDown(Key.DOWN)) this.moveDown();
+		if (Key.isDown(Key.RIGHT)) this.moveRight();
     };
 
     Player.prototype.moveLeft = function() {
@@ -183,6 +164,22 @@
       this.y += 1;
     };
 	
+	//Enemy movement, depends on position of game player
+	Enemy.prototype.update = function() {
+	
+		if((Math.floor(Math.random() * 29))>27){
+		if(this.x < Game.player.x) this.left = false;
+		if(this.x >Game.player.x) this.left = true;
+		if(this.y>Game.player.y) this.down = false;
+		if(this.y<Game.player.y) this.down = true;
+		}
+	
+		if(this.left) this.moveLeft();
+		if(this.down) this.moveDown();
+		if(!this.left) this.moveRight();
+		if(!this.down) this.moveUp();
+    };
+	
 	Enemy.prototype.moveLeft = function() {
       this.x -= 1;
     };
@@ -198,13 +195,24 @@
     Enemy.prototype.moveDown = function() {
       this.y += 1;
     };
-    
-    Player.prototype.update = function() {
-		if (Key.isDown(Key.UP)) this.moveUp();
-		if (Key.isDown(Key.LEFT)) this.moveLeft();
-		if (Key.isDown(Key.DOWN)) this.moveDown();
-		if (Key.isDown(Key.RIGHT)) this.moveRight();
+	
+	//Draw player and enemy
+	 Game.draw = function() {
+      Game.context.clearRect(0, 0, Game.width, Game.height);
+      Game.player.draw(Game.context);
+	  Game.enemy.draw(Game.context);
     };
+
+    Player.prototype.draw = function(context) {
+		context.fillStyle="#000000";
+		context.fillRect(this.x, this.y, this.width, this.height);
+    };
+	
+	Enemy.prototype.draw = function(context) {
+	context.fillStyle="#FF0000";
+      context.fillRect(this.x, this.y, this.width, this.height);
+    };
+    
 	</script>
 </head>
 <body>
