@@ -39,12 +39,20 @@ p a:hover {
 	max-width: 50%;
 }
 
-.search input {
+#search-bar {
     width: 570px;
-    border: 1px solid #D8D8D8;
+    border: 0;
+    border-radius: 2px;
     padding: 15px;
     font-size: 11pt;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    outline: 0;
+    border: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+#search-bar:hover {
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
 }
 
 footer {
