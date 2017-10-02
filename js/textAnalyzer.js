@@ -70,7 +70,7 @@ function reverseString() { //reverse string
     output.value = input.value.split("").reverse().join("");
 }
 
-function stretchString() { //reverse string
+function stretchString() { //stretch string
     output.value = input.value.split("").join(" ");
 }
 
@@ -92,5 +92,21 @@ function trimWhitespace() { //trim leading/trailing whitespace
     output.value = input.value.trim();
 }
 
+function shuffle(string) { 
+    // helper function to shuffle string
+    // Fisher–Yates shuffle - https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+    var parts = string.split('');
+    for (var i = parts.length; i > 0;) {
+        var random = parseInt(Math.random() * i);
+        var temp = parts[--i];
+        parts[i] = parts[random];
+        parts[random] = temp;
+    }
+    return parts.join('');
+}
 
+function shuffleString() { 
+    //shuffle string
+    output.value = shuffle(input.value)
+}
 
