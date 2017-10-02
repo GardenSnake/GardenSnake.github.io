@@ -4,6 +4,36 @@
     padding: 20px;
 }
 
+#textInfo {
+  position: absolute;
+  margin-top: 0.5em;
+  width: 10%;
+  display: inline;
+}
+.textDataInfo {
+  float: right;
+}
+
+#textarea, #output {
+  margin-left: 25%;
+  width: 60%;
+}
+h2 {
+  margin-left: 25%;
+}
+
+#copyButton, #clearButton {
+  margin-left: 25%;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+  margin-left: 15%;
+  margin-right: 10%;
+  text-align: center;
+}
+
 .button {
     background-color: #008CBA;
     border: none;
@@ -14,4 +44,9 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.button:hover {
+  background-color: #016f93;
+  transition-duration: 0.2s;
 }

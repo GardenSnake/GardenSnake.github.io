@@ -28,6 +28,23 @@
 	background-color: #e3f29b;
 }
 
+#hydro95 {
+	position: relative;
+	text-align: center;
+	color: #FFF;
+	background-color: #000;
+	text-shadow: 0px 3px 0px #F00;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+#hydro95 img {
+	position: absolute;
+	width: 50%;
+	right: 10px;
+	bottom: 0;
+}
+
 #karlsol {
 	background-color: grey;
 }
