@@ -97,3 +97,23 @@
     color: rgb(8, 5, 68);
     font-weight: 900;
 }
+
+#daniel478 {
+	position: relative;
+	text-align: center;
+}
+
+#daniel478 img {
+	height: 100%;
+	width: 100%;
+}
+
+#daniel478 p {
+	position: absolute;
+	bottom: 55px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 18px;
+}
