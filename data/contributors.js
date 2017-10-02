@@ -57,5 +57,9 @@ var contributors = [
 	{
 		user: "MathijsHaakman",
 		address: "Wervershoof, Netherlands"
+	},
+	{
+		user: "hydro95",
+		address: "Ottawa, ON"
 	}
 ]
