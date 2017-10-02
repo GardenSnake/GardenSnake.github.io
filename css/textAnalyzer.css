@@ -4,33 +4,53 @@
     padding: 20px;
 }
 
-#textInfo {
-  position: absolute;
-  margin-top: 0.5em;
-  width: 10%;
+#textApp {
   display: inline;
+  float: right;
+  left: 25%;
+  width: 75%;
 }
-.textDataInfo {
+
+#textInfo {
+  position: relative;
+  float: left;
+  display: inline;
+  margin-top: 0.5em;
+  width: 200px;
+}
+
+#textInfoDataList {
+  list-style: none;
+  padding-left: 0px;
+}
+
+#textInfoDataList>li {
+  padding: 2px;
+}
+
+#textInfoDataList>li:nth-child(odd) {
+  background-color: #EEE;
+}
+
+.textInfoData {
   float: right;
 }
 
 #textarea, #output {
-  margin-left: 25%;
-  width: 60%;
-}
-h2 {
-  margin-left: 25%;
+  width: 70%;
 }
 
 #copyButton, #clearButton {
-  margin-left: 25%;
+  display: block;
   margin-bottom: 20px;
+  margin-left: 0px;
 }
 
 .buttons {
   margin-top: 20px;
-  margin-left: 15%;
-  margin-right: 10%;
+  margin-left: 0px;
+  margin-right: 25%;
+  width: 70%;
   text-align: center;
 }
 

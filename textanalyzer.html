@@ -20,43 +20,59 @@
 
 		<div id="textInfo">
 			<h4>About your text:</h4>
-			Character count
-			<span class="textDataInfo" id="characterCounter">0</span><br>
-			Word count
-			<span class="textDataInfo" id="wordCounter">0</span><br>
-			Space count
-			<span class="textDataInfo" id="spaceCounter">0</span><br>
-			Vowel count
-			<span class="textDataInfo" id="vowelCounter">0</span><br>
-			Consonant count
-			<span class="textDataInfo" id="consonantCounter">0</span><br>
-			Number count
-			<span class="textDataInfo" id="numberCounter">0</span><br>
+			<ul id = "textInfoDataList">
+				<li>
+					Character count
+					<span class="textInfoData" id="characterCounter">0</span><br>
+				</li>
+				<li>
+					Word count
+					<span class="textInfoData" id="wordCounter">0</span><br>
+				</li>
+				<li>
+					Space count
+					<span class="textInfoData" id="spaceCounter">0</span><br>
+				</li>
+				<li>
+					Vowel count
+					<span class="textInfoData" id="vowelCounter">0</span><br>
+				</li>
+				<li>
+					Consonant count
+					<span class="textInfoData" id="consonantCounter">0</span><br>
+				</li>
+				<li>
+					Number count
+					<span class="textInfoData" id="numberCounter">0</span><br>
+				</li>
+			</ul>
 		</div>
 
-		<h2>Input</h2>
-		<textarea id="textarea" rows="4" cols="60" oninput="textInfo()"></textarea>
+		<div id = "textApp">
 
-		<button class="button" id="clearButton" onclick="clearInput()">Clear</button>
+			<h2>Input</h2>
+			<textarea id="textarea" rows="4" cols="60" oninput="textInfo()"></textarea>
 
-		<h2>Output</h2>
-		<textarea id="output" rows="4" cols="60" readonly=True></textarea>
+			<button class="button" id="clearButton" onclick="clearInput()">Clear</button>
 
-		<button class="button" id="copyButton" onclick="copyOutput()">Copy to Clipboard</button>
+			<h2>Output</h2>
+			<textarea id="output" rows="4" cols="60" readonly=True></textarea>
 
-		<div class="buttons">
-			<button class="button" onclick="upperCase()">Uppercase</button>
-			<button class="button" onclick="lowerCase()">Lowercase</button>
-			<button class="button" onclick="reverseString()">Reverse Text</button>
-			<button class="button" onClick="pascalCase()">Pascal Case</button>
-			<button class="button" onclick="stretchString()">Stretch Text</button>
-			<button class="button" onClick="removeWhitespace()">Remove Whitespace</button>
-			<button class="button" onClick="trimWhitespace()">Trim Whitespace</button>
-			<button class="button" onClick="shuffleString()">Shuffle Text</button>
+			<button class="button" id="copyButton" onclick="copyOutput()">Copy to Clipboard</button>
 
-			<button class="button">?</button>
+			<div class="buttons">
+				<button class="button" onclick="upperCase()">Uppercase</button>
+				<button class="button" onclick="lowerCase()">Lowercase</button>
+				<button class="button" onclick="reverseString()">Reverse Text</button>
+				<button class="button" onClick="pascalCase()">Pascal Case</button>
+				<button class="button" onclick="stretchString()">Stretch Text</button>
+				<button class="button" onClick="removeWhitespace()">Remove Whitespace</button>
+				<button class="button" onClick="trimWhitespace()">Trim Whitespace</button>
+				<button class="button" onClick="shuffleString()">Shuffle Text</button>
+
+				<button class="button">?</button>
+			</div>
 		</div>
-
 
 	</div>
 
