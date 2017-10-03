@@ -113,4 +113,8 @@ function printASCII(){
   for(int i=0;i<input.value.length;i++){
     output.value+=input.value.charCodeAt(i);
   }
+    
+function removeNumbers() {
+    output.value = input.value.replace(/[0-9]/g, '');
+}
 
