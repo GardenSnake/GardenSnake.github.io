@@ -5,7 +5,6 @@ const copyButton = document.getElementById("copyButton");
 
 function textInfo() { //computes various info about the text input
     characterCounter.innerHTML = input.value.length;
-    printsASCII.innerHTML = printASCII();
     numberCounter.innerHTML = numberCount();
     vowelCounter.innerHTML = vowelCount();
     consonantCounter.innerHTML = consonantCount();
@@ -110,7 +109,8 @@ function shuffleString() {
     output.value = shuffle(input.value)
 }
 function printASCII(){
-  for(int i=0;i<input.value.length;i++){
+    output.value ="";
+  for(var i=0;i<input.value.length;i++){
     output.value+=input.value.charCodeAt(i);
   }
 }
