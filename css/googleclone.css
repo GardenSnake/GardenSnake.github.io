@@ -1,6 +1,8 @@
 body {
 	font-size: 10pt;
-	font-family: arial, sans-serif;
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -56,26 +58,42 @@ p a:hover {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    height: 42px;
     width: 100%;
-    font-size: 10pt;
-    background-color: #F2F2F2;
-}
- 
- #footer-left {
-	float: left;
-	margin-left: 16px;
+    background-color: rgb(242, 242, 242);
+    border-top: 1px solid #E4E4E4;
 }
 
-#footer-right {
-	float: right;
-	margin-right: 16px;
+footer nav {
+    padding: .4em 0;
 }
 
 footer a {
-    padding:15px;
+    color: #666;
+}
+
+footer a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+#footer-left {
+    float: left;
+    margin-left: 2em;
+}
+
+#footer-left a {
+    margin-right: 2em;
+}
+
+#footer-right {
+    float: right;
+    margin-right: 2em;
+}
+
+#footer-right a {
+    margin-left: 2em;
 }
 
 #search-button button {
