@@ -140,3 +140,7 @@ function camelCase(){
     capsCased = capsCased.charAt(0).toLowerCase()+capsCased.substring(1);
     output.value = capsCased.split(" ").join("");
 }
+
+function snakeCase() {
+    output.value = input.value.trim().replace(/ /g, '_');
+}
