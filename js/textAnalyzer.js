@@ -126,3 +126,17 @@ function rot13() {
         return original.charAt(shifted.indexOf(char))
     });
 }
+
+function camelCase(){
+    //Get it Capitalized
+    var capsCased = input.value.replace(/\s/g, ' ').split(' ').map(function(word) {
+        if(word) {
+            return word[0].toUpperCase() + word.slice(1)
+        } else {
+            return '';
+        }
+    }).join(' ');
+    // Make the first letter as Lower Case
+    capsCased = capsCased.charAt(0).toLowerCase()+capsCased.substring(1);
+    output.value = capsCased.split(" ").join("");
+}
