@@ -119,3 +119,10 @@ function removeNumbers() {
     output.value = input.value.replace(/[0-9]/g, '');
 }
 
+function rot13() {
+    var original = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    var shifted = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+    output.value = input.value.replace(/[A-Za-z]/g, function (char) {
+        return original.charAt(shifted.indexOf(char))
+    });
+}
