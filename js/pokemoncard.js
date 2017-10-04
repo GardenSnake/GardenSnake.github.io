@@ -1,4 +1,4 @@
-//pokemonCards array holds names of all pokemon cards in original booster pack
+/*pokemonCards array holds names of all pokemon cards in original booster pack. The name of the pokemon is needed for the URL of the pokemon website. This isn't necessary for the URL of Yugioh cards, so we don't need another array specifically for Yugioh cards*/
 const pokemonCards = [
     ['Alakazam', 'Holographic'],
     ['Blastoise', 'Holographic'],
@@ -110,11 +110,12 @@ var cardName;
 let cardPicture;
 let info;
 
-function selectPack(packNumber, pack) {
+/*This function handles the request of which pack was selected. It moves the image of the card package to the center, and sets up the next function to attach the image of specific card. */
+function selectPack(packNumber) {
     if (packNumber === 1 || packNumber === 3) {
         document.getElementById("table").outerHTML = "";
 
-        //img holds image of pokemon card
+        //img holds image of card package.
         var img = new Image();
         var div = document.getElementById('div1');
         div.appendChild(img);
@@ -130,29 +131,33 @@ function selectPack(packNumber, pack) {
         cardPicture.style.height = 352;
         cardPicture.style.position = "relative";
         cardPicture.style.top = "50px";
-        img.onclick = function() {
+		
+        img.onclick = function() {//Open pack of cards.
             draw(packNumber);
         };
     }
 }
 
-function draw(packNumber) { //pokemon pack selected
+/*this function gets an appropriate random number based on the range of possible cards within in a pack, then attaches the correct url to cardPicture. */
+function draw(packNumber) { 
     info = document.getElementById('info');
-    if (packNumber == 1) {
+	
+    if (packNumber == 1) { //if pokemon pack was selected
         cardNumber = Math.floor(Math.random() * 102);
         cardName = pokemonCards[cardNumber][0].replace(/\s+/g, '-');
         url = "http://pod.pokellector.com/cards/119/" + cardName + ".BS." + (cardNumber + 1) + ".png";
         info.innerHTML = "#" + (cardNumber + 1) + "/102 " + cardName;
         cardPicture.src = url;
     }
-    if (packNumber == 3) { //yugioh pack selected
+    if (packNumber == 3) { //if yugioh pack was selected
         cardNumber = Math.floor(Math.random() * 126);
+		url = "https://ycgscripts-chakrasitesinc.netdna-ssl.com/images/lob/LOB-EN";
         if (cardNumber < 10)
-            url = "https://ycgscripts-chakrasitesinc.netdna-ssl.com/images/lob/LOB-EN00" + cardNumber + ".jpg";
+            url += "00" + cardNumber + ".jpg";
         else if (cardNumber < 100)
-            url = "https://ycgscripts-chakrasitesinc.netdna-ssl.com/images/lob/LOB-EN0" + cardNumber + ".jpg";
+            url += "0" + cardNumber + ".jpg";
         else
-            url = "https://ycgscripts-chakrasitesinc.netdna-ssl.com/images/lob/LOB-EN" + cardNumber + ".jpg";
+            url += "" + cardNumber + ".jpg";
         info.innerHTML = "#" + (cardNumber) + "/126 " + cardName;
         cardPicture.src = url;
     }
