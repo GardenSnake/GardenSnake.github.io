@@ -91,7 +91,7 @@ function trimWhitespace() { //trim leading/trailing whitespace
     output.value = input.value.trim();
 }
 
-function shuffle(string) { 
+function shuffle(string) {
     // helper function to shuffle string
     // Fisher–Yates shuffle - https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
     var parts = string.split('');
@@ -104,7 +104,7 @@ function shuffle(string) {
     return parts.join('');
 }
 
-function shuffleString() { 
+function shuffleString() {
     //shuffle string
     output.value = shuffle(input.value)
 }
@@ -143,4 +143,16 @@ function camelCase(){
 
 function snakeCase() {
     output.value = input.value.trim().replace(/ /g, '_');
+}
+
+function shuffleWords() {
+    var words = input.value.split(" ");
+    var a, b, i;
+    for (i = words.length; i; i--) {
+        a = Math.floor(Math.random() * i);
+        b = words[i - 1];
+        words[i - 1] = words[a];
+        words[a] = b;
+    }
+    output.value = words.join(" ");
 }
