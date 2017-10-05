@@ -13,8 +13,9 @@
 	<!-- this div is filled by the nav.js script, maybe there's a better way to reuse navbar code -->
 	<!-- Implement an additional action to this program by adding a method in textanalyzer.js and linking it back to a button in this file.-->
 
-	<div id="container">
 
+
+	<div class="container">
 		<h1>Text Analyzer</h1>
 		<p>Input some text in the box below and modify it in many different ways. Try it out!</p>
 
@@ -46,24 +47,25 @@
 					<span class="textInfoData" id="numberCounter">0</span><br>
 				</li>
 				<li>
-				    Print ASCII
-				    <span class="textInfoData" id="printsASCII">0</span>span><br>
+					Print ASCII
+					<span class="textInfoData" id="printsASCII">0</span>span><br>
 				</li>
 			</ul>
-		</div>
+		</div> <!-- textInfo end --> 
 
 		<div id = "textApp">
 
-			<h2>Input</h2>
+			<h4>Input:</h4>
 			<textarea id="textarea" rows="4" cols="60" oninput="textInfo()"></textarea>
+			<div id="buttonContainer">
+				<button class="button" id="clearButton" onclick="clearInput()">Clear</button>
+			</div>
+		</div> <!-- textApp end --> 
 
-			<button class="button" id="clearButton" onclick="clearInput()">Clear</button>
+		<div id="textModify">
+			<h4>Modify Text</h4>
 
-			<h2>Output</h2>
-			<textarea id="output" rows="4" cols="60" readonly=True></textarea>
-
-			<button class="button" id="copyButton" onclick="copyOutput()">Copy to Clipboard</button>
-
+			<p> Click on any of the button below to modify the input text! </p>
 			<div class="buttons">
 				<button class="button" onclick="upperCase()">Uppercase</button>
 				<button class="button" onclick="lowerCase()">Lowercase</button>
@@ -75,16 +77,20 @@
 				<button class="button" onClick="shuffleString()">Shuffle Text</button>
 				<button class="button" onClick="shuffleWords()">Shuffle Words</button>
 				<button class="button" onclick="removeNumbers()">Remove Numbers</button>
-        <button class="button" onClick="printASCII()">Print ASCII</button>
+				<button class="button" onClick="printASCII()">Print ASCII</button>
 				<button class="button" onclick="rot13()">ROT 13</button>
 				<button class="button" onclick="camelCase()">Camel Case</button>
 				<button class="button" onclick="snakeCase()">Snake Case</button>
 				<button class="button">?</button>
 			</div>
-		</div>
 
-	</div>
+			<textarea id="output" rows="4" cols="60" readonly=True></textarea>
+			<div id="buttonContainer">
+				<button class="button" id="copyButton" onclick="copyOutput()">Copy to Clipboard</button>
+			</div>
+		</div> <!-- textModify end --> 
 
+	</div> <!-- container end --> 
 
 	<script type="text/javascript" src="js/nav.js"></script>
 	<script type="text/javascript" src="js/textAnalyzer.js"></script>
