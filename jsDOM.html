@@ -35,6 +35,23 @@
 		  float:left;
 		  box-sizing: content-box
 		}
+
+		/* Styles for the calculator */
+
+		#screen {
+			width: 200px;
+			height: 50px;
+			border: 1px solid black;
+			margin: 10px;
+			text-align: right;
+		}
+
+		.btn {
+			width: 40px;
+			height: 40px;
+			margin: 5px;
+		}
+
 	</style>
 
 
@@ -104,7 +121,38 @@
 	</div>
 </div>
 
-
+<div class = "calculator">
+    <h2>Calculator</h2>
+      <div id = "screen"></div>
+    <div id = "buttons">
+      <table>
+        <tr>
+          <td><button class = "btn" value = "7">7</button></td>
+          <td><button class = "btn" value = "8">8</button></td>
+          <td><button class = "btn" value = "9">9</button></td>
+          <td><button class = "btn" value = "+">+</button></td>
+        </tr>
+        <tr>
+          <td><button class = "btn" value = "4">4</button></td>
+          <td><button class = "btn" value = "5">5</button></td>
+          <td><button class = "btn" value = "6">6</button></td>
+          <td><button class = "btn" value = "-">-</button></td>
+        </tr>
+        <tr>
+          <td><button class = "btn" value = "1">1</button></td>
+          <td><button class = "btn" value = "2">2</button></td>
+          <td><button class = "btn" value = "3">3</button></td>
+          <td><button class = "btn" value = "*">*</button></td>
+        </tr>
+        <tr>
+          <td><button class = "btn" value = "0">0</button></td>
+        <td><button class = "btn" id = "end" value = "=">=</button></td>
+          <td><button class = "btn" value = "/">/</button></td>
+          <td><button class = "btn" id = "clear" value = "CE">CE</button></td>
+        </tr>
+      </table>
+    </div>
+</div>
 
 <script src="js/jsDOM.js"></script>
 </body>
