@@ -108,3 +108,32 @@ function handlerClick(element) {
   
   element.stopPropagation()
 }
+
+//Calculator Start
+
+var string = "";
+var result;
+
+document.getElementById('buttons').addEventListener('click',updateScreen,false); 
+
+function updateScreen(e) {
+  var digit = e.target.value;
+  var id = e.target.id;
+  if(id === 'clear') {
+    string = "";
+    console.log(string);
+    document.getElementById('screen').innerHTML = "<h2>"+string+"</h2>";
+  } else if(id === 'end') {
+    result = eval(string);
+    console.log(result);
+    string = result.toString();
+    document.getElementById('screen').innerHTML = "<h2>"+result+"</h2>";
+  } else {
+    if(digit!=null) {
+      string = string.concat(digit);
+    }
+    console.log("Called");
+    document.getElementById('screen').innerHTML = "<h2>"+string+"</h2>";
+  }
+}
+//Calculator end
