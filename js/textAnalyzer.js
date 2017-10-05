@@ -1,7 +1,7 @@
 //Cache the DOM
-const output = document.getElementById("output");
-const input = document.getElementById("textarea");
-const copyButton = document.getElementById("copyButton");
+var output = document.getElementById("output");
+var input = document.getElementById("textarea");
+var copyButton = document.getElementById("copyButton");
 
 function textInfo() { //computes various info about the text input
     characterCounter.innerHTML = input.value.length;
