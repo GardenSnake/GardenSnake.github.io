@@ -23,7 +23,7 @@ $(function() {
   var lastTypingTime;
   var $currentInput = $usernameInput.focus();
 
-  var socket = io('http://142.4.215.176:8888');
+  var socket = io('https://chat.iknowbashfu.com');
 
   function addParticipantsMessage (data) {
     var message = '';
@@ -229,7 +229,7 @@ $(function() {
   socket.on('login', function (data) {
     connected = true;
     // Display the welcome message
-    var message = "Welcome to Socket.IO Chat – ";
+    var message = "Welcome to GardenSnakeChat – ";
     log(message, {
       prepend: true
     });
