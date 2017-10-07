@@ -117,3 +117,13 @@
 	margin-right: auto;
 	font-size: 18px;
 }
+
+#designerandgeek {
+	background-image: url('../images/designerandgeek_was_here.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#designerandgeek p {
+	text-align: center;
+}
