@@ -137,3 +137,21 @@ function updateScreen(e) {
   }
 }
 //Calculator end
+
+
+// Info Generator["start"]
+const info = document.getElementById('finalInfo');
+var temp;
+document.querySelector('.name').addEventListener('keydown',getName);
+function getName(event){
+  info.textContent= event.target.value;
+  temp = event.target.value;
+}
+
+var radios = document.getElementsByName('lover');
+for(var i = 0, max = radios.length; i < max; i++) {
+    radios[i].onclick = function() {
+        info.textContent=temp+" loves "+ this.value;
+    }
+}
+// End of Info Generator
