@@ -5,12 +5,23 @@ html {
     overflow-x: hidden;
 }
 
-.box {
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.hello-box {
+    clear: both;
     border-color: grey;
     border-style: solid;
     border-width: 1px;
-    margin: auto;
-    width: 95%;
+    margin: 2rem;
+    padding: 1rem 1rem 1rem 0;
+}
+
+#contributor-gallery {
+    margin-bottom: 2rem;
 }
 
 
