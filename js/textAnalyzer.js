@@ -3,6 +3,10 @@ var output = document.getElementById("output");
 var input = document.getElementById("textarea");
 var copyButton = document.getElementById("copyButton");
 
+//Modal elements
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+
 function textInfo() { //computes various info about the text input
     characterCounter.innerHTML = input.value.length;
     numberCounter.innerHTML = numberCount();
@@ -58,22 +62,37 @@ function spaceCount() { //counts total amount of white space
 //add functions that modify the input text below
 
 function upperCase() { //capitalizes every letter
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.toUpperCase();
 }
 
 function lowerCase() { // Changes all text to lowercase
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.toLowerCase();
 }
 
 function reverseString() { //reverse string
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.split("").reverse().join("");
 }
 
 function stretchString() { //stretch string
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.split("").join(" ");
 }
 
 function pascalCase() { // Capitalize all first characters
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.replace(/\s/g, ' ').split(' ').map(function(word) {
         if(word) {
             return word[0].toUpperCase() + word.slice(1)
@@ -84,10 +103,16 @@ function pascalCase() { // Capitalize all first characters
 }
 
 function removeWhitespace() { //get rid of whitespace
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.split(" ").join("");
 }
 
 function trimWhitespace() { //trim leading/trailing whitespace
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.trim();
 }
 
@@ -105,21 +130,34 @@ function shuffle(string) {
 }
 
 function shuffleString() {
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     //shuffle string
     output.value = shuffle(input.value)
 }
+
 function printASCII(){
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value ="";
-  for(var i=0;i<input.value.length;i++){
-    output.value+=input.value.charCodeAt(i);
-  }
+    for(var i=0;i<input.value.length;i++){
+        output.value+=input.value.charCodeAt(i);
+    }
 }
 
 function removeNumbers() {
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.replace(/[0-9]/g, '');
 }
 
 function rot13() {
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     var original = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     var shifted = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
     output.value = input.value.replace(/[A-Za-z]/g, function (char) {
@@ -128,6 +166,10 @@ function rot13() {
 }
 
 function camelCase(){
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
+
     //Get it Capitalized
     var capsCased = input.value.replace(/\s/g, ' ').split(' ').map(function(word) {
         if(word) {
@@ -142,10 +184,16 @@ function camelCase(){
 }
 
 function snakeCase() {
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     output.value = input.value.trim().replace(/ /g, '_');
 }
 
 function shuffleWords() {
+    if(input.value==="") {
+        modal.style.display = "block";
+    }
     var words = input.value.split(" ");
     var a, b, i;
     for (i = words.length; i; i--) {
@@ -155,4 +203,16 @@ function shuffleWords() {
         words[a] = b;
     }
     output.value = words.join(" ");
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
 }
