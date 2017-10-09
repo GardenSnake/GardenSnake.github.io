@@ -2,113 +2,118 @@
 <html>
 
 <head>
-	<title>Text Analyzer </title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-	<link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css">
-	<link rel="stylesheet" type="text/css" href="css/textAnalyzer.css">
+    <title>Text Analyzer </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css">
+    <link rel="stylesheet" type="text/css" href="css/textAnalyzer.css">
 </head>
 
 <body>
-	<div id="navMenu"></div>
-	<!-- this div is filled by the nav.js script, maybe there's a better way to reuse navbar code -->
-	<!-- Implement an additional action to this program by adding a method in textanalyzer.js and linking it back to a button in this file.-->
+    <div id="navMenu"></div>
+    <!-- this div is filled by the nav.js script, maybe there's a better way to reuse navbar code -->
+    <!-- Implement an additional action to this program by adding a method in textanalyzer.js and linking it back to a button in this file.-->
 
-	<!-- The Modal -->
-	<div id="myModal" class="modal">
-	
-		<!-- Modal content -->
-		<div class="modal-content">
-			<div class="modal-head">
-				<span class="close">&times;</span>
-				<h2>Empty text field!</h2>
-			</div>
-			<div class="modal-body">
-				<p>Please enter some text to continue.</p>
-			</div>
-		</div>
-	
-	</div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-	<div class="container">
-		<h1>Text Analyzer</h1>
-		<p>Input some text in the box below and modify it in many different ways. Try it out!</p>
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-head">
+                <span class="close">&times;</span>
+                <h2>Empty text field!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Please enter some text to continue.</p>
+            </div>
+        </div>
 
-		<div id="textInfo">
-			<h4>About your text:</h4>
-			<ul id = "textInfoDataList">
-				<li>
-					Character count
-					<span class="textInfoData" id="characterCounter">0</span><br>
-				</li>
-				<li>
-					Word count
-					<span class="textInfoData" id="wordCounter">0</span><br>
-				</li>
-				<li>
-					Space count
-					<span class="textInfoData" id="spaceCounter">0</span><br>
-				</li>
-				<li>
-					Vowel count
-					<span class="textInfoData" id="vowelCounter">0</span><br>
-				</li>
-				<li>
-					Consonant count
-					<span class="textInfoData" id="consonantCounter">0</span><br>
-				</li>
-				<li>
-					Number count
-					<span class="textInfoData" id="numberCounter">0</span><br>
-				</li>
-				<li>
-					Print ASCII
-					<span class="textInfoData" id="printsASCII">0</span><br>
-				</li>
-			</ul>
-		</div> <!-- textInfo end --> 
+    </div>
 
-		<div id = "textApp">
+    <div class="container">
+        <h1>Text Analyzer</h1>
+        <p>Input some text in the box below and modify it in many different ways. Try it out!</p>
 
-			<h4>Input:</h4>
-			<textarea id="textarea" rows="4" cols="60" oninput="textInfo()"></textarea>
-			<div id="buttonContainer">
-				<button class="button" id="clearButton" onclick="clearInput()">Clear</button>
-			</div>
-		</div> <!-- textApp end --> 
+        <div id="textInfo">
+            <h4>About your text:</h4>
+            <ul id="textInfoDataList">
+                <li>
+                    Character count
+                    <span class="textInfoData" id="characterCounter">0</span><br>
+                </li>
+                <li>
+                    Word count
+                    <span class="textInfoData" id="wordCounter">0</span><br>
+                </li>
+                <li>
+                    Space count
+                    <span class="textInfoData" id="spaceCounter">0</span><br>
+                </li>
+                <li>
+                    Vowel count
+                    <span class="textInfoData" id="vowelCounter">0</span><br>
+                </li>
+                <li>
+                    Consonant count
+                    <span class="textInfoData" id="consonantCounter">0</span><br>
+                </li>
+                <li>
+                    Number count
+                    <span class="textInfoData" id="numberCounter">0</span><br>
+                </li>
+                <li>
+                    Print ASCII
+                    <span class="textInfoData" id="printsASCII">0</span><br>
+                </li>
+            </ul>
+        </div>
+        <!-- textInfo end -->
 
-		<div id="textModify">
-			<h4>Modify Text</h4>
+        <div id="textApp">
 
-			<p> Click on any of the button below to modify the input text! </p>
-			<div class="buttons">
-				<button class="button" onclick="upperCase()">Uppercase</button>
-				<button class="button" onclick="lowerCase()">Lowercase</button>
-				<button class="button" onclick="reverseString()">Reverse Text</button>
-				<button class="button" onClick="pascalCase()">Pascal Case</button>
-				<button class="button" onclick="stretchString()">Stretch Text</button>
-				<button class="button" onClick="removeWhitespace()">Remove Whitespace</button>
-				<button class="button" onClick="trimWhitespace()">Trim Whitespace</button>
-				<button class="button" onClick="shuffleString()">Shuffle Text</button>
-				<button class="button" onClick="shuffleWords()">Shuffle Words</button>
-				<button class="button" onclick="removeNumbers()">Remove Numbers</button>
-				<button class="button" onClick="printASCII()">Print ASCII</button>
-				<button class="button" onclick="rot13()">ROT 13</button>
-				<button class="button" onclick="camelCase()">Camel Case</button>
-				<button class="button" onclick="snakeCase()">Snake Case</button>
-				<button class="button" onclick="morseCode()">Morse Code</button>
-				<button class="button">?</button>
-			</div>
+            <h4>Input:</h4>
+            <textarea id="textarea" rows="4" cols="60" oninput="textInfo()"></textarea>
+            <div id="buttonContainer">
+                <button class="button" id="clearButton" onclick="clearInput()">Clear</button>
+            </div>
+        </div>
+        <!-- textApp end -->
 
-			<textarea id="output" rows="4" cols="60" readonly=True></textarea>
-			<div id="buttonContainer">
-				<button class="button" id="copyButton" onclick="copyOutput()">Copy to Clipboard</button>
-			</div>
-		</div> <!-- textModify end --> 
+        <div id="textModify">
+            <h4>Modify Text</h4>
 
-	</div> <!-- container end --> 
+            <p> Click on any of the button below to modify the input text! </p>
+            <div class="buttons">
+                <button class="button" onclick="upperCase()">Uppercase</button>
+                <button class="button" onclick="lowerCase()">Lowercase</button>
+                <button class="button" onclick="reverseString()">Reverse Text</button>
+                <button class="button" onClick="pascalCase()">Pascal Case</button>
+                <button class="button" onclick="stretchString()">Stretch Text</button>
+                <button class="button" onClick="removeWhitespace()">Remove Whitespace</button>
+                <button class="button" onClick="trimWhitespace()">Trim Whitespace</button>
+                <button class="button" onClick="shuffleString()">Shuffle Text</button>
+                <button class="button" onClick="shuffleWords()">Shuffle Words</button>
+                <button class="button" onclick="removeNumbers()">Remove Numbers</button>
+                <button class="button" onClick="printASCII()">Print ASCII</button>
+                <button class="button" onclick="rot13()">ROT 13</button>
+                <button class="button" onclick="camelCase()">Camel Case</button>
+                <button class="button" onclick="snakeCase()">Snake Case</button>
+                <button class="button" onclick="morseCode()">Morse Code</button>
+                <button class="button" onclick="tapCode()">Tap Code</button>
+                <button class="button">?</button>
+            </div>
 
-	<script type="text/javascript" src="js/nav.js"></script>
-	<script type="text/javascript" src="js/textAnalyzer.js"></script>
+            <textarea id="output" rows="4" cols="60" readonly=True></textarea>
+            <div id="buttonContainer">
+                <button class="button" id="copyButton" onclick="copyOutput()">Copy to Clipboard</button>
+            </div>
+        </div>
+        <!-- textModify end -->
+
+    </div>
+    <!-- container end -->
+
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/textAnalyzer.js"></script>
 
 </body>
 
