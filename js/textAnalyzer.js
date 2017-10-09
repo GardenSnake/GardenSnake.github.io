@@ -223,3 +223,17 @@ window.onclick = function(event) {
             modal.style.display = "none";
         }
 }
+
+function morseCode() {
+    if(input.value === "") {
+        modal.style.display = "block";
+    }
+    var code = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..",".----","..---","...--","....-",".....","-....","--...","---..","----.","-----"];
+    var text = "abcdefghijklmnopqrstuvwxyz1234567890";
+    output.value = input.value.toLowerCase().replace(/[a-z0-9 ]/g, function (char) {
+        if(char === ' ') {
+            return "  /  ";
+        }
+        return code[text.indexOf(char)]+" ";
+    });
+}
