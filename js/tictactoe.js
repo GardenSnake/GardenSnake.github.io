@@ -47,7 +47,7 @@ function checkWinner(turn) {
 function checkIfFull() {
 	var full = false
 	for(var i = 1; i <= 9; i++) {
-		if(getSqaure(i).innerHTML == "") {
+		if(getSquare(i).innerHTML == "") {
 			return false
 		}
 	}
@@ -56,15 +56,15 @@ function checkIfFull() {
 
 function checkIfSame(s1,s2,s3,turn) {
 	var result = false
-	if(getSqaure(s1).innerHTML == turn
-	&& getSqaure(s2).innerHTML == turn
-	&& getSqaure(s3).innerHTML == turn)
+	if(getSquare(s1).innerHTML == turn
+	&& getSquare(s2).innerHTML == turn
+	&& getSquare(s3).innerHTML == turn)
 		result = true
 	return result
 }
 
 
-function getSqaure(number) {
+function getSquare(number) {
 	return document.getElementById("square" + number)
 }
 
@@ -72,7 +72,7 @@ function resetBoard() {
 	document.turn = "X"
 	document.winner = null
 	for(var i = 1; i <= 9; i++) {
-		getSqaure(i).innerHTML = null;
+		getSquare(i).innerHTML = null;
 	}
 }
 
