@@ -252,10 +252,17 @@ function tapCode() {
         "..... .", "..... ..", "..... ...", "..... ....", "..... .....",
     ];
 
-    output.value = input.value.toLowerCase().replace(/[a-z0-9 ]/g, function(char) {
+    output.value = input.value.toLowerCase().replace(/[a-z]/g, function(char) {
         if (char === ' ') {
             return "/  ";
         }
         return code[key.indexOf(char)] + "  ";
     });
+}
+
+function removeVowels() {
+    if (input.value === "") {
+        modal.style.display = "block";
+    }
+    output.value = input.value.replace(/[aeiou]/g, '');
 }
