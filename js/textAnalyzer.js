@@ -204,6 +204,13 @@ function shuffleWords() {
     output.value = words.join(" ");
 }
 
+function removeLetters() {
+    if (input.value === "") {
+        modal.style.display = "block";
+    }
+    output.value = input.value.replace(/[a-zA-Z]/g, '').trim();
+}
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";

@@ -155,3 +155,40 @@ for(var i = 0, max = radios.length; i < max; i++) {
     }
 }
 // End of Info Generator
+
+//Start of button clicker
+var start = document.getElementById('startButton');
+var click = document.getElementById('click');
+
+var score;
+var timeLeft;
+var Timer;
+
+function clickStart() {
+  timeLeft = 10;
+  score = 0;
+  start.style.visibility = "hidden";
+  click.style.visibility = "visible";
+  click.disabled = false;
+  document.getElementById('timerem').innerHTML = timeLeft.toString();
+  Timer = setInterval(stopTimer,1000);
+}
+
+function updateScore() {
+  score++;
+  document.getElementById('score').innerHTML = score.toString();
+}
+
+function stopTimer() {
+  if(timeLeft === 0) {
+    clearInterval(Timer);
+    click.disabled = true;
+    start.style.visibility = "visible";
+    document.getElementById('scoreps').innerHTML = (Math.floor(score/10)).toString();
+  }
+  else {
+    timeLeft--;
+    document.getElementById('timerem').innerHTML = timeLeft.toString();
+  }
+}
+//End of button clicker

@@ -176,6 +176,16 @@
 	<span id="finalInfo" style="padding-left: 10px;"></span>
 </div>
 
+<div style="border: 1px solid #000; margin-top: 10px; padding:10px;">
+  <h2>Button Clicker</h2>
+  <button onclick="clickStart()" id='startButton'>Start</button>
+  <h4>Time Left</h4>
+  <p id='timerem'>10</p>
+  <button id='click' onclick = "updateScore()" disabled>Click here</button>
+  <h4>Score: </h4><p id="score">0</p>
+  <h4>Clicks per second: </h4><p id = 'scoreps'>-</p>
+</div>
+
 <script src="js/jsDOM.js"></script>
 </body>
 </html>
