@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>GardenSnake's Public HTML page</title>
+
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css">
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+
+	<body>
+		<div id="navMenu"></div>
+
+		<div style="width:100vw;height:100vh;padding:0;margin:0;z-index:-1;position:absolute;top:0px;letf:0px;" id="map"></div>
+		
+		<div class="container">
+			<Br><Br><br>
+			<div class="row">
+				<div class="col-lg-12 text-center" id="mainbox">
+					<h1>Find places</h1>
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="basic-addon1"> @ </span>
+						<input type="text" id=autocomplete class="form-control" placeholder="Enter a starting address" aria-describedby="basic-addon1">
+						<select id="placetype" class="selectpicker form-control" data-live-search="true" title="Please select a lunch ...">
+							<option>accounting</option>
+							<option>airport</option>
+							<option>amusement park</option>
+							<option>aquarium</option>
+							<option>art gallery</option>
+							<option>atm</option>
+							<option>bakery</option>
+							<option>bank</option>
+							<option>bar</option>
+							<option>beauty salon</option>
+							<option>bicycle store</option>
+							<option>book store</option>
+							<option>bowling alley</option>
+							<option>bus station</option>
+							<option>cafe</option>
+							<option>campground</option>
+							<option>car dealer</option>
+							<option>car rental</option>
+							<option>car repair</option>
+							<option>car wash</option>
+							<option>casino</option>
+							<option>cemetery</option>
+							<option>church</option>
+							<option>city hall</option>
+							<option>clothing store</option>
+							<option>convenience store</option>
+							<option>courthouse</option>
+							<option>dentist</option>
+							<option>department store</option>
+							<option>doctor</option>
+							<option>electrician</option>
+							<option>electronics store</option>
+							<option>embassy</option>
+							<option>fire station</option>
+							<option>florist</option>
+							<option>funeral home</option>
+							<option>furniture store</option>
+							<option>gas station</option>
+							<option>gym</option>
+							<option>hair care</option>
+							<option>hardware store</option>
+							<option>hindu temple</option>
+							<option>home goods store</option>
+							<option>hospital</option>
+							<option>insurance agency</option>
+							<option>jewelry store</option>
+							<option>laundry</option>
+							<option>lawyer</option>
+							<option>library</option>
+							<option>liquor store</option>
+							<option>local government office</option>
+							<option>locksmith</option>
+							<option>lodging</option>
+							<option>meal delivery</option>
+							<option>meal takeaway</option>
+							<option>mosque</option>
+							<option>movie rental</option>
+							<option>movie theater</option>
+							<option>moving company</option>
+							<option>museum</option>
+							<option>night club</option>
+							<option>painter</option>
+							<option>park</option>
+							<option>parking</option>
+							<option>pet store</option>
+							<option>pharmacy</option>
+							<option>physiotherapist</option>
+							<option>plumber</option>
+							<option>police</option>
+							<option>post office</option>
+							<option>real estate agency</option>
+							<option selected>restaurant</option>
+							<option>roofing contractor</option>
+							<option>rv park</option>
+							<option>school</option>
+							<option>shoe store</option>
+							<option>shopping mall</option>
+							<option>spa</option>
+							<option>stadium</option>
+							<option>storage</option>
+							<option>store</option>
+							<option>subway station</option>
+							<option>synagogue</option>
+							<option>taxi stand</option>
+							<option>train station</option>
+							<option>transit station</option>
+							<option>travel agency</option>
+							<option>university</option>
+							<option>veterinary care</option>
+							<option>zoo</option>
+						</select>
+					</div>
+					<div class="alert alert-success" role="alert">
+						So this thing will let you find different kinds of places near a place and get reviews and pictures and stuff about those places. Choose a place type then enter a starting address. Made by <a href='https://github.com/Pamblam'>Pamlam</a> using <a href='https://github.com/Pamblam/placeSearch.js'>PlaceSearch</a> for a quick Hacktoberfest PR. If the results fail to load after a few seconds you may need to make your own API key.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/main.js"></script>
+		<script type="text/javascript" src="js/nav.js"></script>
+		<script src="js/placefinder.js"></script>
+		
+		<script>
+			
+			$("#autocomplete").placeSearch({
+				key: "AIzaSyBNqBl2R6u8pONv3CWyXev-otesQf-1Ypo",
+				type: $("#placetype").find("option:selected").text().replace(" ", "_"),
+				map: "#map",
+				callback: function(places){
+					$("#mainbox").html('<div class="list-group" id=lg></div>');
+					$.each(places, function(k, place){ console.log(k, place);
+						let $place = $("<div class='list-group-item'>");
+						$place.append('<h4 class="list-group-item-heading">'+place.name+'</h4>')
+						$place.append('<img src="'+place.photo+'" class="img-responsive" style=width:95%>')
+						$place.append('<div class="list-group-item-text">'+place.address+'</div>');
+						$place.append('<div class="list-group-item-text">'+place.phone+'</div>');
+						$place.append('<div class="list-group-item-text">Rating: '+place.rating+' stars</div>');
+						$place.append('<div class="list-group-item-text"><a href="'+place.website+'">website</a></div>');
+						$place.append('<div class="list-group-item-text"><a href="#" id="reviews'+k+'">reviews</a></div>');
+						$("#lg").append($place);
+						$("#reviews"+k).click(function(e){
+							e.preventDefault();
+							let str = [];
+							for(var i=place.reviews.length; i--;){
+								str.push(place.reviews[i].author_name+" rated "+place.reviews[i].rating+" stars\n");
+								str.push('"'+place.reviews[i].text+'"'+"\n");
+								str.push('---'+"\n");
+							}
+							alert(str.join(""));
+						});
+					});
+				}
+			});
+			
+		</script>
+	</body>
+
+</html>
