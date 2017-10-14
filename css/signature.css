@@ -127,3 +127,13 @@
 #designerandgeek p {
 	text-align: center;
 }
+
+#cagross img {
+	height: 75%;
+	display: block;
+    margin: auto;
+}
+
+#cagross p {
+	text-align: center;
+}
