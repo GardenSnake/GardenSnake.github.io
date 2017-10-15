@@ -103,6 +103,45 @@ const pokemonCards = [
     ['Psychic Energy', 'Common'],
     ['Water Energy', 'Common']
 ];
+
+/*
+    hearthstoneCards array holds names of all hearthstone cards in this particular deck. The name of the hearthstone card is needed for the URL of the hearthstone website.
+    There are thirty cards in this deck.
+    Each element in this array is a sub-array consisting of card name, card class, and card rarity.
+*/
+const hearthstoneCards = [
+    ['Houndmaster', 'Hunter', 'Free'],
+    ['ArcaneShot', 'Hunter', 'Basic'],
+    ['BestialWrath', 'Hunter', 'Epic'],
+    ['ExplosiveShot', 'Hunter', 'Rare'],
+    ['Flare', 'Hunter', 'Rare'],
+    ['FreezingTrap', 'Hunter', 'Common'],
+    ['HuntersMark', 'Hunter', 'Basic'],
+    ['KingKrush', 'Hunter', 'Legendary'],
+    ['KillCommand', 'Hunter', 'Basic'],
+    ['Misdirection', 'Hunter', 'Rare'],
+    ['SnakeTrap', 'Hunter', 'Epic'],
+    ['ScavengingHyena', 'Hunter', 'Common'],
+    ['MultiShot', 'Hunter', 'Basic'],
+    ['TundraRhino', 'Hunter', 'Basic'],
+    ['UnleashtheHounds', 'Hunter', 'Common'],
+    ['FaerieDragon', 'Neutral', 'Common'],
+    ['Abomination', 'Neutral', 'Rare'],
+    ['DalaranMage', 'Neutral', 'Basic'],
+    ['FlesheatingGhould', 'Neutral', 'Rare'],
+    ['HarrisonJones', 'Neutral', 'Legendary'],
+    ['IllidanStormrage', 'Neutral', 'Legendary'],
+    ['MasterSwordsmith', 'Neutral', 'Rare'],
+    ['MurlocTidecaller', 'Neutral', 'Rare'],
+    ['SilverbackPatriarch', 'Neutral', 'Basic'],
+    ['SouthseaDeckhand', 'Neutral', 'Common'],
+    ['StormwindChampion', 'Neutral', 'Basic'],
+    ['TwilightDrake', 'Neutral', 'Rare'],
+    ['VentureCoMercenary', 'Neutral', 'Common'],
+    ['WorgenInfiltrator', 'Neutral', 'Common'],
+    ['Ysera', 'Neutral', 'Legendary']
+];
+
 var cardNumber;
 var cardName;
 
@@ -112,7 +151,7 @@ let info;
 
 /*This function handles the request of which pack was selected. It moves the image of the card package to the center, and sets up the next function to attach the image of specific card. */
 function selectPack(packNumber) {
-    if (packNumber === 1 || packNumber === 3) {
+    if (packNumber === 1 || packNumber === 2 || packNumber === 3) {
         document.getElementById("table").outerHTML = "";
 
         //img holds image of card package.
@@ -121,6 +160,8 @@ function selectPack(packNumber) {
         div.appendChild(img);
         if (packNumber === 1)
             img.src = "https://images-na.ssl-images-amazon.com/images/I/51RbSD7izLL._SY300_.jpg";
+        if (packNumber === 2)
+            img.src = "http://media-hearth.cursecdn.com/attachments/39/664/cardback_0.png";
         if (packNumber === 3)
             img.src = "https://images-na.ssl-images-amazon.com/images/I/61mNw3ThUkL.jpg";
         img.id = "cardPicture";
@@ -131,7 +172,7 @@ function selectPack(packNumber) {
         cardPicture.style.height = 352;
         cardPicture.style.position = "relative";
         cardPicture.style.top = "50px";
-		
+
         img.onclick = function() {//Open pack of cards.
             draw(packNumber);
         };
@@ -139,14 +180,21 @@ function selectPack(packNumber) {
 }
 
 /*this function gets an appropriate random number based on the range of possible cards within in a pack, then attaches the correct url to cardPicture. */
-function draw(packNumber) { 
+function draw(packNumber) {
     info = document.getElementById('info');
-	
+
     if (packNumber == 1) { //if pokemon pack was selected
         cardNumber = Math.floor(Math.random() * 102);
         cardName = pokemonCards[cardNumber][0].replace(/\s+/g, '-');
         url = "http://pod.pokellector.com/cards/119/" + cardName + ".BS." + (cardNumber + 1) + ".png";
         info.innerHTML = "#" + (cardNumber + 1) + "/102 " + cardName;
+        cardPicture.src = url;
+    }
+    if (packNumber == 2) { //if hearthstone deck was selected
+        cardNumber = Math.floor(Math.random() * 30);
+        cardName = hearthstoneCards[cardNumber][0];
+        url = "http://www.hearthstonewarcraft.com/images/cards/" + cardName + "_hearthstone.png";
+        info.innerHTML = "#" + (cardNumber + 1) + "/30 " + cardName;
         cardPicture.src = url;
     }
     if (packNumber == 3) { //if yugioh pack was selected
