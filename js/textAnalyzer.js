@@ -266,3 +266,19 @@ function removeVowels() {
     }
     output.value = input.value.replace(/[aeiou]/g, '');
 }
+
+//Replaces whole numbers that aren't part of other words with their hex representation
+function decToHex(){
+    if (input.value === "") {
+        modal.style.display = "block";
+    }
+
+    var words = input.value.split(" ");
+    for(var i = 0; i < words.length; i++){
+        if(!isNaN(words[i])){
+            var num = Number(words[i]); //Convert to number, won't convert to hex if still string
+            words[i] = "0x" + num.toString(16);
+        }
+    }
+    output.value = words.join(" ");
+}
