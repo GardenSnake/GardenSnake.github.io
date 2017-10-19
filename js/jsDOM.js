@@ -64,7 +64,7 @@ function removeItem(e){
 
 const searchBox = document.querySelector('.search-box');
 const searchOutput = document.getElementById('search-output');
-searchBox.addEventListener('keydown', handleSearchBoxChange);
+searchBox.addEventListener('keyup', handleSearchBoxChange);
 
 function handleSearchBoxChange(event) {
   searchOutput.innerText = event.target.value;
@@ -142,7 +142,7 @@ function updateScreen(e) {
 // Info Generator["start"]
 const info = document.getElementById('finalInfo');
 var temp;
-document.querySelector('.name').addEventListener('keydown',getName);
+document.querySelector('.name').addEventListener('keyup',getName);
 function getName(event){
   info.textContent= event.target.value;
   temp = event.target.value;
