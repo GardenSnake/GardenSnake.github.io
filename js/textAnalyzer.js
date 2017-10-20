@@ -283,6 +283,26 @@ function decToHex(){
     output.value = words.join(" ");
 }
 
+
+// Remove duplicated words
+function removeDuplicates() {
+    if (input.value === "") {
+        modal.style.display = "block";
+    }
+
+    var arr = input.value.toLowerCase().match(/\w+/g); // Remove punctuation
+    var arrCopy = arr.slice();  // Create copy of array to modify
+    var results = [];
+    
+    for(var i = 0; i < arr.length; i++) {
+      var current = arrCopy.shift();
+      if(results.indexOf(current) === -1) {
+        results.push(current);
+      }
+    }
+    output.value = results.sort(' ').join(' ');
+  }
+
 function removeLeadingNumbers(){
     if (input.value === "") {
         modal.style.display = "block";
@@ -297,3 +317,4 @@ function removeLeadingNumbers(){
     }
     output.value = words;
 }
+
