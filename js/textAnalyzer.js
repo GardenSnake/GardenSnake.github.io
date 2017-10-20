@@ -283,6 +283,7 @@ function decToHex(){
     output.value = words.join(" ");
 }
 
+
 // Remove duplicated words
 function removeDuplicates() {
     if (input.value === "") {
@@ -301,3 +302,19 @@ function removeDuplicates() {
     }
     output.value = results.sort(' ').join(' ');
   }
+
+function removeLeadingNumbers(){
+    if (input.value === "") {
+        modal.style.display = "block";
+    }
+    var words = input.value;
+    while(true){
+        if(Number.isInteger(parseInt(words.charAt(0))) && words.length>0){
+            words=words.slice(1);
+        }else{
+            break;
+        }
+    }
+    output.value = words;
+}
+

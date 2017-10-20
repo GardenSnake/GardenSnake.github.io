@@ -128,7 +128,7 @@ const hearthstoneCards = [
     ['FaerieDragon', 'Neutral', 'Common'],
     ['Abomination', 'Neutral', 'Rare'],
     ['DalaranMage', 'Neutral', 'Basic'],
-    ['FlesheatingGhould', 'Neutral', 'Rare'],
+    ['FlesheatingGhoul', 'Neutral', 'Rare'],
     ['HarrisonJones', 'Neutral', 'Legendary'],
     ['IllidanStormrage', 'Neutral', 'Legendary'],
     ['MasterSwordsmith', 'Neutral', 'Rare'],
