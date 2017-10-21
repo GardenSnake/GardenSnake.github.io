@@ -1,6 +1,6 @@
 _A collaborative web project._
 
-This project helps newcomers get right into programming with other people and make something amazing happen. If you're new to GitHub, go through the [README.md page](https://github.com/GardenSnake/GardenSnake.github.io/blob/master/README.md) first to understand how to make changes and submit your results. Then begin to work on any of the beginner projects below: 
+This project helps newcomers get right into programming with other people and make something amazing happen. If you're new to GitHub, go through the [README.md page](https://github.com/GardenSnake/GardenSnake.github.io/blob/master/README.md) first to understand how to make changes and submit your results.  Then begin to work on any of the beginner projects below.  [(Our discord server here.)](https://discordapp.com/invite/yjwTHpK) 
 
 ## Beginner Projects: 
 Here's a list of beginner projects that are open for everyone to try and improve. Find the appropriate files in the repository and start writing code.
@@ -49,4 +49,4 @@ Suggestions for how newcomers can help improve the projects are below.
 
 Github hosts our entire project as a website!  You can view the result so far of our collective work [here.](https://gardensnake.github.io/) 
 
-Our discord server [here.](https://discordapp.com/invite/yjwTHpK)
+Discord server [here.](https://discordapp.com/invite/yjwTHpK)
