@@ -186,6 +186,21 @@
   <h4>Clicks per second: </h4><p id = 'scoreps'>-</p>
 </div>
 
+<!-- RGB to Hex slider -->
+<div id="slider" style="border: 1px solid #000; margin-top: 10px; padding:10px;">
+	<h2>RGB to Hex Slider</h2>
+
+	<input type="range" name="R" id="slider-r" min=0 max=250>
+	<div>R: 125</div>
+	<input type="range" name="G" id="slider-g" min=0 max=250>
+	<div>G: 125</div>
+	<input type="range" name="B" id="slider-b" min=0 max=250>
+	<div>B: 125</div>
+
+	<div id="color" style="display: inline-block; width: 80px; height: 30px; border: 1px solid #000; background-color: #7d7d7d;"></div>
+	<div id="color-code" style="display: inline">#7d7d7d</div>
+</div>
+<!-- End color slider -->
 <script src="js/jsDOM.js"></script>
 </body>
 </html>
