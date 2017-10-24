@@ -70,6 +70,17 @@ Image:<br>
 <img src="https://imgs.xkcd.com/comics/11th_grade.png" alt="alternate text if image is not able to be displayed" title="title attribute of image">
 <br>
 
+<br>
+HTML Linking Tags:<br>
+<dt>Basic Link - 
+  <code>&lt;a href=&quot;<i>url</i>&quot;&gt;link text&lt;/a&gt;</code></dt>
+  <a href="https://www.google.com/">Google Link</a>
+<br> 
+<dt id="fragment">Link to a Fragment - <code>&lt;a href=&quot;<i>#fragment</i>&quot;&gt;link&lt;/a&gt;</code></dt>
+Fragments first need to be defined somewhere in a webpage by giving them a name, for <code>&lt;a name=&quot;fragment_name&quot;&gt;</code>,
+then links to this fragment are created by using the hash (#) character: <code>&lt;a href=&quot;#fragment_name&quot;&gt;Link&lt;/a&gt;</code>.
+To link to a fragment on another page you would simply append the fragment name to the address, for example: <code>href=&quot;example.html#fragment_name&quot;</code>. </dd>
+<br>
 Check Box:
 <form style="border: solid 1px">
 	<input type="checkbox" checked="checked">Choice A (already checked)<br>
