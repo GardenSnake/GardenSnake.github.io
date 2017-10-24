@@ -71,16 +71,31 @@ Image:<br>
 <br>
 
 <br>
-HTML Linking Tags:<br>
-<dt>Basic Link - 
+<strong>HTML Linking Tags:</strong><br>
+<dt><strong>Basic Link-</strong>
   <code>&lt;a href=&quot;<i>url</i>&quot;&gt;link text&lt;/a&gt;</code></dt>
   <a href="https://www.google.com/">Google Link</a>
 <br> 
-<dt id="fragment">Link to a Fragment - <code>&lt;a href=&quot;<i>#fragment</i>&quot;&gt;link&lt;/a&gt;</code></dt>
+<br>
+<dt id="fragment"><strong>Linkg to a Fragment -</strong></dt><code>&lt;a href=&quot;<i>#fragment</i>&quot;&gt;link&lt;/a&gt;</code></dt>
 Fragments first need to be defined somewhere in a webpage by giving them a name, for <code>&lt;a name=&quot;fragment_name&quot;&gt;</code>,
 then links to this fragment are created by using the hash (#) character: <code>&lt;a href=&quot;#fragment_name&quot;&gt;Link&lt;/a&gt;</code>.
 To link to a fragment on another page you would simply append the fragment name to the address, for example: <code>href=&quot;example.html#fragment_name&quot;</code>. </dd>
 <br>
+<br>
+<dt><strong>Target Window - </strong><code>&lt;a href=&quot;<i>url</i>&quot; target=&quot;<i>???</i>&quot;&gt;link&lt;/a&gt;</code></dt>
+<dd>
+ By setting the <code>target=&quot;_BLANK&quot;</code> the page you link to will load up in a new window (or new tab in some newer browsers).
+ Similary, <code>&quot;_self&quot;, &quot;_parent&quot;, or &quot;_top&quot;</code> will open the link in the current window, the parent window (used with <a href="frames.php">frames</a>) or the top level window, respectively.</dd>
+<br>
+
+<dt><strong>Email Link - </strong><code>&lt;a href=&quot;mailto:<i>email</i>&quot;&gt;&lt;/a&gt;</code></dt>
+<dd>A special kind of link, the <code>mailto</code> notation link instructs the browser to compose and email to the specified address using the default email program.
+ It but does not actually send any emails automatically.
+ You can also set a subject for the email by using <code>&lt;a href=&quot;mailto:htmlguide@drgrog.com?Subject=Linking&quot;&gt;email me&lt;/a&gt;</code>.
+ You may notice that I have used this type of link over on the <a href="contact.php">contact me</a> page. </dd>
+ <br>
+
 Check Box:
 <form style="border: solid 1px">
 	<input type="checkbox" checked="checked">Choice A (already checked)<br>
