@@ -73,6 +73,9 @@
 
 #Snoopy {
     background-image: url("../images/Snoopy.png");
+    background-position:top;
+    background-size:cover;
+    background-repeat:no-repeat;
     position:relative;
 }
 
