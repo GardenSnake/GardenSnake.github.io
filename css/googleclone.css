@@ -5,9 +5,44 @@ body {
     padding: 0;
 }
 
+header {
+    position: absolute;
+    top: -10px;
+    width: 100%;
+}
+
+#header-left {
+    float: left;
+    margin-left: 1em;
+}
+
+#header-right {
+    float: right;
+    margin-right: 1em;
+}
+
+header nav {
+    padding: .4em 0;
+    margin-top: 20px
+}
+
+#header-left a {
+    margin-left: .75em;
+}
+
+#header-right a {
+    margin-right: .75em;
+    align-items:center;
+}
+
 nav {
 	float:right;
 	margin: 7px 21px;
+}
+
+i {
+    position:relative;
+    vertical-align:middle;
 }
 
 a   {
@@ -36,7 +71,7 @@ p a:hover {
 }
 
 .search img {
-    margin-top:175px;
+    margin-top:25px;
 	margin-bottom: 3%;
 	max-width: 50%;
 }
